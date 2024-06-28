@@ -21,42 +21,42 @@ const ElementsPage: React.FC = () => {
                   codes={{
                     html: `<header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Logo</a>
+                <a href="#" class="nav__logo" target="_top">Logo</a>
                 <div class="hamburger">
                     <i class='bx bx-menu header__toggle' id="header-toggle"></i>
                 </div>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link active-link" target="_top">
+                            <a href="#home" class="nav__link active-link">
                                 <!-- <i class='bx bx-home-alt nav__icon'></i> -->
                                 <span class="nav__name">Home</span>
                             </a>
                         </li>
                         
                         <li class="nav__item">
-                            <a href="#about" class="nav__link" target="_top">
+                            <a href="#about" class="nav__link">
                                 <!-- <i class='bx bx-user nav__icon'></i> -->
                                 <span class="nav__name">About</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#skills" class="nav__link" target="_top">
+                            <a href="#skills" class="nav__link">
                                 <!-- <i class='bx bx-book-alt nav__icon'></i> -->
                                 <span class="nav__name">Skills</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#portfolio" class="nav__link" target="_top">
+                            <a href="#portfolio" class="nav__link" >
                                 <!-- <i class='bx bx-briefcase-alt nav__icon'></i> -->
                                 <span class="nav__name">Portfolio</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#contactme" class="nav__link" target="_top">
+                            <a href="#contactme" class="nav__link">
                                 <!-- <i class='bx bx-message-square-detail nav__icon'></i> -->
                                 <span class="nav__name">Contactme</span>
                             </a>
@@ -145,7 +145,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: hsl(0deg 0% 92.44%);
   color: var(--text-color);
 }
 
@@ -470,35 +470,35 @@ navLinks.forEach(link => {
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" class="nav__link active-link" target="_top">
+                            <a href="#home" class="nav__link active-link">
                                 <!-- <i class='bx bx-home-alt nav__icon'></i> -->
                                 <span class="nav__name">Home</span>
                             </a>
                         </li>
                         
                         <li class="nav__item">
-                            <a href="#about" class="nav__link" target="_top">
+                            <a href="#about" class="nav__link">
                                 <!-- <i class='bx bx-user nav__icon'></i> -->
                                 <span class="nav__name">About</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#skills" class="nav__link" target="_top">
+                            <a href="#skills" class="nav__link">
                                 <!-- <i class='bx bx-book-alt nav__icon'></i> -->
                                 <span class="nav__name">Skills</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#portfolio" class="nav__link" target="_top">
+                            <a href="#portfolio" class="nav__link">
                                 <!-- <i class='bx bx-briefcase-alt nav__icon'></i> -->
                                 <span class="nav__name">Portfolio</span>
                             </a>
                         </li>
 
                         <li class="nav__item">
-                            <a href="#contactme" class="nav__link" target="_top">
+                            <a href="#contactme" class="nav__link">
                                 <!-- <i class='bx bx-message-square-detail nav__icon'></i> -->
                                 <span class="nav__name">Contactme</span>
                             </a>
@@ -589,7 +589,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: hsl(0deg 0% 92.44%);
   color: var(--text-color);
 }
 

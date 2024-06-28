@@ -12,17 +12,16 @@ type PreviewProps = {
 const RenderPreview: React.FC<PreviewProps> = ({ codes }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  // Function to handle internal navigation
-const handleNavigation = (e: any) => {
-  e.preventDefault(); // Prevent default link behavior
-  e.stopPropagation(); // Stop the event from bubbling up to the parent
-  const targetId = e.target.getAttribute("href").slice(1); // Remove the '#' to get the ID
-  const targetElement =
-    iframeRef.current?.contentWindow?.document.getElementById(targetId);
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth" });
-  }
-};
+  const handleNavigation = (e: any) => {
+    e.preventDefault(); // Prevent default link behavior
+    e.stopPropagation(); // Stop the event from bubbling up to the parent
+    const targetId = e.target.getAttribute("href").slice(1); // Remove the '#' to get the ID
+    const targetElement =
+      iframeRef.current?.contentWindow?.document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   // Effect to attach event listeners to links
   useEffect(() => {
@@ -44,7 +43,8 @@ const handleNavigation = (e: any) => {
 
   return (
     <div className="preview_window_big">
-      <iframe className="big_iframe"
+      <iframe
+        className="big_iframe"
         srcDoc={`
   <!DOCTYPE html>
   <html lang="en">
@@ -58,31 +58,33 @@ const handleNavigation = (e: any) => {
   <body>
     ${codes.html}
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const navLinks = document.querySelectorAll('.nav__link');
-        navLinks.forEach(link => {
-          link.addEventListener('click', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
             event.preventDefault();
             const targetId = this.getAttribute('href').slice(1);
             const targetElement = document.getElementById(targetId);
+
             if (targetElement) {
-              targetElement.scrollIntoView({behavior: 'smooth'});
+                const offsetTop = targetElement.offsetTop;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
             }
-          });
         });
-      });
+    });
+});
+
           ${codes.js}
     </script>
   </body>
   </html>
 `}
         style={{ width: "100%", height: "100%" }}
-        sandbox="allow-scripts allow-same-origin"
+        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation"
         title="Preview Window"
       />
     </div>
   );
 };
-
 
 export default RenderPreview;

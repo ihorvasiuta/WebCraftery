@@ -9,7 +9,7 @@ body {
   height: 460px;
   position: relative;
   box-shadow: 0px 20px 15px #33333335;
-  background-color: rgb(158, 158, 158);
+  background-color: rgb(255, 255, 255);
 }
 .notch {
   z-index: 50;
@@ -48,5 +48,6 @@ body {
   border-radius: 0.2rem;
 }
 .iframe_window {
+  border-radius: 30px;
   padding-top: 20px;
 }
