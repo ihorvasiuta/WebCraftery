@@ -1,0 +1,11 @@
+.exp_group {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.left_side {
+    width: 1080px;
+}
+.preview_windows {
+    display: flex;
+}

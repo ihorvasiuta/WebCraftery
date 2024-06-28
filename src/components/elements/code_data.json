@@ -1,0 +1,14 @@
+[
+  {
+    "classicNav": {
+      "html": "<div class=\"nav__menu\" id=\"nav-menu\">\n    <ul class=\"nav__list\">\n        <li class=\"nav__item\">\n            <a href=\"#home\" class=\"nav__link active-link\">\n                <span class=\"nav__name\">Home</span>\n            </a>\n        </li>\n\n        <li class=\"nav__item\">\n            <a href=\"#about\" class=\"nav__link\">\n                <span class=\"nav__name\">About</span>\n            </a>\n        </li>\n    </ul>\n</div>\n<div class=\"nav__menu\" id=\"nav-menu\">\n    <ul class=\"nav__list\">\n        <li class=\"nav__item\">\n            <a href=\"#home\" class=\"nav__link active-link\">\n                <span class=\"nav__name\">Home</span>\n            </a>\n        </li>\n\n        <li class=\"nav__item\">\n            <a href=\"#about\" class=\"nav__link\">\n                <span class=\"nav__name\">About</span>\n            </a>\n        </li>\n    </ul>\n</div>",
+      "css": "nav ul { list-style: none; } nav li { display: inline; padding: 5px; }",
+      "js": ""
+    },
+    "modernNav": {
+      "html": "<nav><ul><li>Home</li><li>Services</li><li>Contact</li></ul></nav>",
+      "css": "nav ul { list-style: none; display: flex; } nav li { padding: 10px; }",
+      "js": "document.querySelector('nav').addEventListener('mouseenter', () => console.log('Hovered!'));"
+    }
+  }
+]

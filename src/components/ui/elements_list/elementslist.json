@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Navbar menus",
+    "icon": "bi-gear-fill",
+    "childrens": [
+      {
+        "title": "classic menu",
+        "path": "/classic-menu"
+      },
+      {
+        "title": "menu in the center",
+        "path": "/menu-in-center"
+      },
+      {
+        "title": "menu in the left",
+        "path": "/menu-in-left"
+      }
+    ]
+  },
+  {
+    "title": "Carousel-Sliders",
+    "icon": "bi-sliders",
+    "childrens": [
+      {
+        "title": "classic menu",
+        "path": "/carousel-classic-menu"
+      },
+      {
+        "title": "menu in the center",
+        "path": "/carousel-menu-in-center"
+      },
+      {
+        "title": "menu in the left",
+        "path": "/carousel-menu-in-left"
+      }
+    ]
+  },
+  {
+    "title": "Footers",
+    "icon": "bi-sliders",
+    "childrens": [
+      {
+        "title": "portfolio footer",
+        "path": "/carousel-classic-menu"
+      },
+      {
+        "title": "service footer",
+        "path": "/carousel-menu-in-center"
+      },
+      {
+        "title": "universal footer",
+        "path": "/carousel-menu-in-left"
+      }
+    ]
+  },
+  {
+    "title": "Buttons",
+    "icon": "bi-sliders",
+    "childrens": [
+      {
+        "title": "minimalism",
+        "path": "/carousel-classic-menu"
+      },
+      {
+        "title": "classic",
+        "path": "/carousel-menu-in-center"
+      },
+      {
+        "title": "links",
+        "path": "/carousel-menu-in-left"
+      }
+    ]
+  }
+]

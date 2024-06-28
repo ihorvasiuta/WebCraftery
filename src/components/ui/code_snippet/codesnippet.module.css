@@ -1,0 +1,68 @@
+.code_snippet {
+  width: 800px;
+  height: 450px; /* Fixed height */
+  background: rgb(30, 30, 30);
+  border-radius: 23px;
+  overflow: hidden; /* Ensures no overflow is visible outside the container */
+  position: relative; /* Ensures absolute positioning is relative to this container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filetabs {
+  display: flex;
+  background: #3a3a3a;
+  padding-top: 11px;
+  padding-left: 8px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+.filetab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 180px;
+  border: none;
+  cursor: pointer;
+  background: #282828;
+  border-bottom: 2px solid transparent;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  color: #64b7e5;
+  text-decoration: underline;
+}
+
+.filetab.active {
+  background: rgb(30, 30, 30);
+}
+
+/* Additional styles can be added as needed */
+
+/* Specific style for the syntax-highlighted code area */
+.syntax_highlighter {
+  max-height: 380px; /* Adjusted height to allow for padding and tab height */
+  overflow: auto; /* Enables scroll within the syntax highlighter if content is too long */
+  padding: 10px; /* Padding for readability */
+}
+.syntax_highlighter::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+.syntax_highlighter::-webkit-scrollbar-thumb:hover {
+    transition: 0.5s;
+    background-color: rgb(126, 126, 126);
+    /* border-radius: 10px; */
+}
+.syntax_highlighter::-webkit-scrollbar-thumb {
+    background-color: #717171;
+    /* border-radius: 10px; */
+}
+.icon_style {
+  padding-left: 20px;
+}
+
+.tabs {
+  width: 570px;
+  display: flex;
+  justify-content: space-around;
+}
