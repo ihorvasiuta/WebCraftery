@@ -1,11 +1,14 @@
 .exp_group {
-    padding-top: 25px;
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
-.left_side {
-    width: 1080px;
+.content_side {
+    padding: 20px;
+    flex-grow: 1;
 }
 .preview_windows {
+    max-width: 1100px;
     display: flex;
+    justify-content: space-between;
 }

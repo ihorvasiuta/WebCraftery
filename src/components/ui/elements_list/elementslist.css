@@ -5,12 +5,17 @@
   align-items: center;
   flex-direction: column;
   width: 280px;
-  min-height: 400px;
-  max-height: 800px;
   background-color: #ffffff;
   padding: 10px;
-  border-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 3rem; /* Adjust this value based on your header's height if needed */
+  height: calc(
+    100vh - 3rem
+  ); /* Adjust if your header/footer has a different height */
+  overflow-y: auto;
 }
 
 .title {
@@ -75,7 +80,7 @@
   transition: transform 0.3s;
 }
 
-.arrow.open img {
+.arrow img {
   transform: rotate(180deg);
 }
 
@@ -84,5 +89,5 @@
 }
 
 .elements_list_inner {
-    padding-top: 30px;
+  padding-top: 30px;
 }

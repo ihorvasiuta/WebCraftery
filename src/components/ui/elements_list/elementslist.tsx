@@ -40,7 +40,7 @@ const ElementsList: React.FC = () => {
                 />
               </span>
             </div>
-            <ul className={`subitems ${item.open ? "open" : ""}`}>
+            <ul className="subitems open">
               {item.childrens.map((subitem: any, subIndex: number) => (
                 <li key={subIndex} className="subitem">
                   <a href={subitem.path || "#"}>{subitem.title}</a>

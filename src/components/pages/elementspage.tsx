@@ -9,13 +9,13 @@ import RenderPreviewPhone from "../ui/preview/preview_phone";
 const ElementsPage: React.FC = () => {
   return (
     <>
-      <div className="container">
-        <div className="homepage" style={{ height: "200vh" }}>
-          <div className="exp_group">
-            <div className="elements_list">
-              <ElementsList />
-            </div>
-            <div className="left_side">
+      <div className="homepage" style={{ height: "200vh" }}>
+        <div className="exp_group">
+          <div className="elements_list">
+            <ElementsList />
+          </div>
+          <div className="content_side">
+            <div className="container">
               <div className="preview_windows">
                 <RenderPreview
                   codes={{

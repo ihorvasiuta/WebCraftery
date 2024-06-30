@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </html>
 `}
         style={{ width: "100%", height: "100%" }}
-        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation"
+        sandbox="allow-scripts allow-top-navigation-by-user-activation"
         title="Preview Window"
       />
     </div>
