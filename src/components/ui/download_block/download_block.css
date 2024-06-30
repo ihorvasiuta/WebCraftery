@@ -1,0 +1,231 @@
+.download_block {
+    overflow: hidden;
+  width: 280px; /* Adjust based on your design */
+  background-color: #dcdcdc; /* Light grey background */
+  border-bottom-right-radius: 23px;
+  border-top-right-radius: 23px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download_block h3 {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.download_block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.download_block li a {
+  text-decoration: none;
+  color: #007bff; /* Bootstrap primary color */
+  font-weight: bold;
+}
+
+.docs_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 43px;
+    background-color: #D9D9D9;
+}
+
+.button_strg {
+  --main-focus: #6f95be;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #323232;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button_strg, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button_strg .button__text {
+  transform: translateX(22px);
+  color: var(--font-color);
+  font-weight: 500;
+}
+
+.button_strg .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--main-focus);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_strg .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.button_strg:hover {
+  background: var(--bg-color);
+}
+
+.button_strg:hover .button__text {
+  color: transparent;
+}
+
+.button_strg:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button_strg:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+
+.underdown_line {
+    width: 230px;
+    height: 4px;
+    background: #ffffff; 
+    border-radius: 11px;
+}
+.copyordown_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 135px;
+    border: 2px solid black;
+}
+.copyordown_text {
+    margin-bottom: 20px;
+    text-align: start;
+    font-size: 18px;
+    color: black;
+}
+
+.copylink_btn {
+  background-color: #F2F7FA;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  overflow: hidden;
+  transition-duration: 700ms;
+}
+
+.copylink_btn span:first-child {
+  color: #0E418F;
+  position: absolute;
+  transform: translate(-50%, -50%)
+}
+
+.copylink_btn span:last-child {
+  position: absolute;
+  color: #B5CCF3;
+  opacity: 0;
+  transform: translateY(100%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.copylink_btn:focus {
+  background-color: #0E418F;
+  width: 120px;
+  height: 40px;
+  transition-delay: 100ms;
+  transition-duration: 500ms;
+}
+
+.copylink_btn:focus span:first-child {
+  color: #B5CCF3;
+  transform: translateX(-50%) translateY(-150%);
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+.copylink_btn:focus span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition-delay: 300ms;
+  transition-duration: 500ms;
+}
+
+.copylink_btn:focus:end {
+  background-color: #FFFFFF;
+  width: 120px;
+  height: 40px;
+  transition-duration: 900ms;
+}
+
+.centralize {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.description {
+  margin-top: 10px;
+  color: #B5CCF3;
+}
+
+.question_block {
+    width: 90%;
+    height: 150px;
+    background: white;
+    border-radius: 20px;
+}
+.rahit {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback {
+    color: #2e6cbd;
+    background: white;  
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.feedback .buttons {
+    margin-top: 10px;
+}
+
+.like-button, .dislike-button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.active_feedback {
+    background-color: #2e6cbd;  /* Green background for active state */
+    color: white;
+}
+
+.like-button:hover, .dislike-button:hover {
+    background-color: #ddd; /* Light gray background on hover */
+}

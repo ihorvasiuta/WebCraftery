@@ -1,6 +1,7 @@
 import React from "react";
 import CodeSnippet from "../ui/code_snippet/codesnippet";
 import ElementsList from "../ui/elements_list/elementslist";
+import DownloadBlock from "../ui/download_block/download_block";
 import RenderPreview from "../ui/preview/preview";
 import codeData from "../elements/code_data.json";
 import "./elementspage.css";
@@ -888,13 +889,16 @@ navLinks.forEach(link => {
                   }}
                 />
               </div>
-              <CodeSnippet
-                codeExamples={{
-                  html: codeData[0].classicNav.html,
-                  css: codeData[0].classicNav.css,
-                  js: `document.querySelector("nav ul").addEventListener("click", function(e) { alert("Clicked"); });`,
-                }}
-              />
+              <div className="sources_block">
+                <CodeSnippet
+                  codeExamples={{
+                    html: codeData[0].classicNav.html,
+                    css: codeData[0].classicNav.css,
+                    js: `document.querySelector("nav ul").addEventListener("click", function(e) { alert("Clicked"); });`,
+                  }}
+                />
+                <DownloadBlock/>
+              </div>
             </div>
           </div>
         </div>

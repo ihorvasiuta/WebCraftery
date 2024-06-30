@@ -2,7 +2,8 @@
   width: 800px;
   height: 450px; /* Fixed height */
   background: rgb(30, 30, 30);
-  border-radius: 23px;
+  border-bottom-left-radius: 23px;
+  border-top-left-radius: 23px;
   overflow: hidden; /* Ensures no overflow is visible outside the container */
   position: relative; /* Ensures absolute positioning is relative to this container */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
