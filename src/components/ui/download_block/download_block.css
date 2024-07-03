@@ -105,8 +105,8 @@
 
 .underdown_line {
   width: 200px;
-  height: 2px;
-  background: #656565;
+  height: 1.5px;
+  background: #878787;
   border-radius: 11px;
 }
 .copyordown_block {
@@ -115,21 +115,19 @@
   align-items: start;
   text-align: center;
   flex-direction: column;
-  width: 100%;
   height: 135px;
   padding-left: 35px;
 }
 .copyordown_text {
-    font-weight: 500;
-    display: block;
-    font-size: 1.5em;
-    font-family: 'Montserrat', sans-serif;
-    color: #686868;
+  font-weight: 300;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  color: #686868;
   text-decoration: underline;
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: start;
-  font-size: 18px;
+  font-size: 14px;
   /* color: rgb(34, 74, 130); */
 }
 
@@ -161,23 +159,28 @@
   border-radius: 20px;
   text-align: center;
   padding: 20px;
-  /* margin-top: 80px; */
-  top: 15px;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 .share_text {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    color: inherit;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+  padding-bottom: 10px;
+  font-weight: 300;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  color: #686868;
+  text-decoration: underline;
+  text-align: start;
 }
 
 .share_block {
-    position: relative;
-    align-items: start;
-    right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+  flex-direction: column;
+  height: 135px;
+  padding-left: 35px;
 }
 .feedback .buttons {
   margin-top: 10px;
@@ -288,3 +291,25 @@
     font-family: 'Montserrat', sans-serif;
     color: #404040;
 } */
+
+@media screen and (max-width: 1300px) {
+  .download_block {
+    height: 250px;
+    width: 800px;
+    border-radius: 0px;
+    border-bottom-right-radius: 23px;
+    border-bottom-left-radius: 23px;
+  }
+  .tell_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 15px;
+  }
+  .share_block {
+    padding-top: 25px;
+  }
+  .feedback {
+    margin-top: 30px;
+  }
+}

@@ -67,3 +67,12 @@
   display: flex;
   justify-content: space-around;
 }
+
+
+@media screen and (max-width: 1300px) { 
+  .code_snippet {
+    border-radius: 0px;
+      border-top-left-radius: 23px;
+      border-top-right-radius: 23px;
+  }
+}
