@@ -41,7 +41,8 @@ body {
 }
 .speaker {
   position: absolute;
-  right: 3rem;
+  right: 2.8rem;
+  top: 4px;
   width: 4rem;
   height: 0.3rem;
   background: #333;
@@ -50,4 +51,10 @@ body {
 .iframe_window {
   border-radius: 30px;
   padding-top: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .iphone {
+    display: none;
+  }
 }

@@ -14,4 +14,11 @@
 }
 .sources_block {
     display: flex;
+    padding-top: 30px;
+}
+
+@media screen and (max-width: 1300px) {
+    .sources_block {
+        flex-direction: column;
+    }
 }
