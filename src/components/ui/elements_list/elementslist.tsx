@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./elementslist.css";
 import listData from "./elementslist.json";
 import { ElementItem, Category } from "./types";
@@ -10,7 +10,8 @@ const ElementsList: React.FC<{ onSelect: (item: ElementItem) => void }> = ({
   const [list, setList] = useState<Category[]>(() =>
     listData.map((category) => ({ ...category, open: false }))
   );
-  const navigate = useNavigate(); // Initialize useNavigate
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const toggleSubitems = (index: number) => {
     const newList = [...list];
@@ -19,8 +20,8 @@ const ElementsList: React.FC<{ onSelect: (item: ElementItem) => void }> = ({
   };
 
   const handleSelectItem = (item: ElementItem) => {
-    onSelect(item); // Pass the selected item up for further processing
-    navigate(`/elements${item.path}`);
+    setActiveId(item.id);
+    navigate(`/elements/${item.id}`);
   };
 
   return (
@@ -52,8 +53,8 @@ const ElementsList: React.FC<{ onSelect: (item: ElementItem) => void }> = ({
               {category.childrens.map((item, subIndex) => (
                 <li
                   key={subIndex}
-                  className="subitem"
-                  onClick={() => handleSelectItem(item)} // Use the new handler
+                  className={`subitem ${item.id === activeId ? "active_element" : ""}`}
+                  onClick={() => handleSelectItem(item)}
                 >
                   <a
                     href="#"

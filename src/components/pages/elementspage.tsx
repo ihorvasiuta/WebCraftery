@@ -6,27 +6,26 @@ import DownloadBlock from "../ui/download_block/download_block";
 import RenderPreview from "../ui/preview/preview";
 import "./elementspage.css";
 import RenderPreviewPhone from "../ui/preview/preview_phone";
-import  elementsData from "../ui/elements_list/elementslist.json";
+import elementsData from "../ui/elements_list/elementslist.json";
 import { ElementItem } from "../ui/elements_list/types";
 
-const ElementsPage = () => {
-  const { elementId } = useParams<{ elementId: string }>();
+const ElementsPage: React.FC = () => {
   const navigate = useNavigate();
+  const { elementId } = useParams<{ elementId?: string }>();
   const [element, setElement] = useState<ElementItem | null>(null);
 
   useEffect(() => {
-    // console.log("Current elementId:", elementId); 
     if (elementId) {
       const selectedElement = elementsData
         .flatMap((cat) => cat.childrens)
         .find((child) => child.id === elementId);
       setElement(selectedElement || null);
+    } else {
+      setElement(null);
     }
   }, [elementId]);
-
-  // Function to handle selection from ElementsList
   const handleSelectItem = (item: ElementItem) => {
-    navigate(item.path); // Navigate to the path of the selected item
+    navigate(item.path);
   };
 
   return (
