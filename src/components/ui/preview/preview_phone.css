@@ -3,8 +3,9 @@ body {
   height: 100%;
 }
 .iphone {
+  overflow: hidden;
   border: 5px solid black;
-  border-radius: 40px;
+  border-radius: 37px;
   width: 270px;
   height: 460px;
   position: relative;
@@ -14,11 +15,11 @@ body {
 .notch {
   z-index: 50;
   top: 0;
-  left: 62px;
+  left: 59px;
   position: absolute;
   background: #000000;
   width: 140px;
-  height: 20px;
+  height: 21.5px;
   border-radius: 0px 0px 15px 15px;
 }
 .screen {
@@ -49,12 +50,82 @@ body {
   border-radius: 0.2rem;
 }
 .iframe_window {
-  border-radius: 30px;
-  padding-top: 20px;
+  border-bottom-right-radius: 37px;
+  border-bottom-left-radius: 37px;
 }
-
+.status_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 26px;
+  width: 100%;
+  background-color: #eff4f9;
+}
+.mob_wifi_batt_img {
+  padding-right: 10px;
+  height: 12.5;
+  width: 58px;
+}
+.time_img {
+  padding-left: 14px;
+  width: 50px;
+  height: 11.5px;
+}
 @media screen and (max-width: 1300px) {
   .iphone {
     display: none;
   }
+}
+.browser-bar {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+}
+
+.icon-button:hover {
+  background-color: #ddd;
+}
+
+.url-input {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.url-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+/* Adding specific styles for the box icons if not using an actual library */
+/* @font-face {
+  font-family: "boxicons";
+  src: url("path/to/boxicons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+[class^="bx-"],
+[class*=" bx-"] {
+  font-family: "boxicons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

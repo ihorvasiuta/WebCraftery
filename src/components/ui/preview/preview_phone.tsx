@@ -45,6 +45,14 @@ const RenderPreviewPhone: React.FC<PreviewProps> = ({ codes }) => {
   return (
     <div className="iphone">
       <div className="screen">
+        <div className="status_bar">
+          <img className="time_img" src={require(`./time_iphone.png`)} alt="" />
+          <img
+            className="mob_wifi_batt_img"
+            src={require(`./status_bar.png`)}
+            alt=""
+          />
+        </div>
         <div className="preview_window">
           <iframe
             className="iframe_window"

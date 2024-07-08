@@ -43,6 +43,14 @@ const RenderPreview: React.FC<PreviewProps> = ({ codes }) => {
 
   return (
     <div className="preview_window_big">
+      <div className="status_bar">
+        <img className="time_img" src={require(`./time_iphone.png`)} alt="" />
+        <img
+          className="mob_wifi_batt_img"
+          src={require(`./status_bar.png`)}
+          alt=""
+        />
+      </div>
       <iframe
         className="big_iframe"
         srcDoc={`
