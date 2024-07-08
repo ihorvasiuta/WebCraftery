@@ -34,6 +34,10 @@ const ElementsList: React.FC<{ onSelect: (item: ElementItem) => void }> = ({
           alt="Elements Icon"
         />
       </div>
+      {/* <img
+        src={require(`./elements_images/classic_slider_imgs/img1.jpg`)}
+        alt=""
+      /> */}
       <div className="elements_list_inner">
         {list.map((category, index) => (
           <div key={index} className="element_group">
@@ -53,7 +57,9 @@ const ElementsList: React.FC<{ onSelect: (item: ElementItem) => void }> = ({
               {category.childrens.map((item, subIndex) => (
                 <li
                   key={subIndex}
-                  className={`subitem ${item.id === activeId ? "active_element" : ""}`}
+                  className={`subitem ${
+                    item.id === activeId ? "active_element" : ""
+                  }`}
                   onClick={() => handleSelectItem(item)}
                 >
                   <a

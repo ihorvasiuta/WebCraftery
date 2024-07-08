@@ -21,7 +21,7 @@
   font-family: "Be Vietnam Pro", sans-serif;
   font-weight: 300;
   font-style: normal;
-  padding-top: 20px;
+  padding-top: 40px;
   display: flex;
   align-items: center;
   font-size: 22px;
@@ -41,7 +41,7 @@
   font-weight: 400;
   font-style: normal;
   padding-left: 55px;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -84,6 +84,7 @@
 .elements_list_inner {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   padding-top: 30px;
   overflow-y: auto;
@@ -101,5 +102,4 @@
 .subitem.active_element {
   background-color: #f0f0f0; 
   color: #333; 
-  font-weight: bold;
 }
