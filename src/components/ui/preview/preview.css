@@ -9,3 +9,221 @@
 .big_iframe{
   overflow: auto; 
 }
+.card {
+  width: 100%;
+  background: #e0e1e5;
+  overflow: hidden;
+  display: flex;
+}
+
+.circles,
+.browser {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.circles {
+  width: 20%;
+  gap: 8px;
+  padding: 10px;
+}
+
+.c {
+  width: 09px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 5px rgba(235, 235, 235, 0.356);
+}
+
+.c:first-child {
+  background-color: red;
+}
+
+.c:nth-child(2) {
+  background-color: rgb(204, 167, 4);
+}
+
+.c:last-child {
+  background-color: green;
+}
+
+.browser {
+  width: 80%;
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.chevrons {
+  display: flex;
+}
+
+.search-bar {
+  position: relative;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: rgb(88, 88, 88);
+  box-shadow: inset 2px 2px 2px #05050525;
+}
+
+.search-bar svg {
+  position: absolute;
+  left: 10px;
+}
+
+.actionbar {
+    box-sizing: border-box;
+  outline: none;
+  font-family: "Roboto", "Ionicons", sans-serif !important;
+  height: 22px;
+  z-index: 10000;
+  display: flex;
+  line-height: 22px;
+  font-size: 14px;
+  -webkit-backdrop-filter: blur(30px) saturate(2) brightness(0.5);
+  backdrop-filter: blur(30px) saturate(2) brightness(0.5);
+  background: rgba(50, 50, 50, 0.5);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(0, 0, 0, 0.5);
+}
+.actionbar .rightActions {
+  right: 0;
+}
+.actionbar .leftActions {
+  left: 0;
+}
+.actionbar .rightActions, .actionbar .leftActions {
+  position: absolute;
+  display: flex;
+  width: auto;
+  height: 100%;
+}
+.actionbar .rightActions .item, .actionbar .leftActions .item {
+  position: relative;
+  display: inline-flex;
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0 12px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+.actionbar .rightActions .item:not(.sActionbarNotifications).active, .actionbar .leftActions .item:not(.sActionbarNotifications).active {
+  background: #006AFF;
+}
+.actionbar .rightActions .item.sActionbarNotifications:active, .actionbar .leftActions .item.sActionbarNotifications:active {
+  background: #006AFF;
+}
+.actionbar .rightActions .item.bold, .actionbar .leftActions .item.bold {
+  font-weight: 600;
+}
+.actionbar .rightActions .item[data-trigger=sPanelLogOptions], .actionbar .leftActions .item[data-trigger=sPanelLogOptions] {
+  margin-left: 10px;
+}
+.actionbar .rightActions .item[data-trigger=sPanelLogOptions]:before, .actionbar .leftActions .item[data-trigger=sPanelLogOptions]:before {
+  content: "";
+  font-size: 20px;
+  line-height: 24px;
+}
+.actionbar .rightActions .item[data-trigger=sPanelLogOptions]:after, .actionbar .leftActions .item[data-trigger=sPanelLogOptions]:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 10px;
+  height: 100%;
+}
+.actionbar .rightActions .item[data-trigger=sPanelNotifications], .actionbar .leftActions .item[data-trigger=sPanelNotifications] {
+  padding-right: 20px;
+}
+.actionbar .rightActions .item[data-trigger=sPanelNotifications]:before, .actionbar .leftActions .item[data-trigger=sPanelNotifications]:before {
+  content: "";
+}
+.actionbar .rightActions .item[data-trigger=sPanelNotifications].hasNotifications:after, .actionbar .leftActions .item[data-trigger=sPanelNotifications].hasNotifications:after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #E53939;
+}
+.actionbar .rightActions .item[data-trigger=sPanelBluetooth]:before, .actionbar .leftActions .item[data-trigger=sPanelBluetooth]:before {
+  content: "";
+  font-size: 16px;
+  line-height: 24px;
+}
+.actionbar .rightActions .item[data-trigger=sPanelBluetooth]:after, .actionbar .leftActions .item[data-trigger=sPanelBluetooth]:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  transform: translateY(-50%) translateX(-50%);
+  background: #FFF;
+  opacity: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35), 5px 0 0 0 white, 5px 0 0 1px rgba(0, 0, 0, 0.25), -5px 0 0 0 white, -5px 0 0 1px rgba(0, 0, 0, 0.25);
+}
+.actionbar .rightActions .item[data-trigger=sPanelBluetooth][data-connected=true]:before, .actionbar .leftActions .item[data-trigger=sPanelBluetooth][data-connected=true]:before {
+  opacity: 0.75;
+}
+.actionbar .rightActions .item[data-trigger=sPanelBluetooth][data-connected=true]:after, .actionbar .leftActions .item[data-trigger=sPanelBluetooth][data-connected=true]:after {
+  opacity: 1;
+}
+.actionbar .rightActions .item[data-trigger=sPanelPower], .actionbar .leftActions .item[data-trigger=sPanelPower] {
+  padding-right: 36px;
+}
+.actionbar .rightActions .item[data-trigger=sPanelPower][sPowerShowPercentage=true], .actionbar .leftActions .item[data-trigger=sPanelPower][sPowerShowPercentage=true] {
+  padding-right: 46px;
+}
+.actionbar .rightActions .item[data-trigger=sPanelPower][sPowerShowPercentage=true]:before, .actionbar .leftActions .item[data-trigger=sPanelPower][sPowerShowPercentage=true]:before {
+  content: attr(data-percentage) "%";
+}
+.actionbar .rightActions .item[data-trigger=sPanelPower] i, .actionbar .leftActions .item[data-trigger=sPanelPower] i {
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 12px;
+  width: 26px;
+  height: 12px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px white;
+}
+.actionbar .rightActions .item[data-trigger=sPanelPower] i:after, .actionbar .leftActions .item[data-trigger=sPanelPower] i:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4px);
+  left: 2px;
+  width: 70%;
+  max-width: calc(100% - 4px);
+  height: 8px;
+  background: white;
+  border-radius: 1px;
+}
+.actionbar .rightActions .item[data-trigger=sPanelPower] i:before, .actionbar .leftActions .item[data-trigger=sPanelPower] i:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  right: -3px;
+  width: 2px;
+  max-width: calc(100% - 4px);
+  height: 4px;
+  background: white;
+  border-radius: 0 100% 100% 0;
+}
+.actionbar.hide {
+  top: -26px;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: none;
+}
+
