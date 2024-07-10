@@ -88,61 +88,62 @@ const RenderPreview: React.FC<PreviewProps> = ({ codes }) => {
           ></div>
         </div>
       </div>
-      <div className="card">
-        <div className="circles">
-          <div className="c"></div>
-          <div className="c"></div>
-          <div className="c"></div>
-        </div>
 
-        <div className="browser">
-          <div className="chevrons">
-            <svg
-              viewBox="0 0 20 20"
-              height="16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-              data-name="20"
-              id="_20"
-            >
-              <path
-                transform="translate(6.25 3.75)"
-                d="M0,6.25,6.25,0l.875.875L1.75,6.25l5.375,5.375L6.25,12.5Z"
-                id="Fill"
-              ></path>
-            </svg>
-            <svg
-              viewBox="0 0 20 20"
-              height="16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-              data-name="20"
-              id="_20"
-            >
-              <path
-                transform="translate(6.625 3.75)"
-                d="M7.125,6.25.875,12.5,0,11.625,5.375,6.25,0,.875.875,0Z"
-                id="Fill"
-              ></path>
-            </svg>
+      <div className="address-bar">
+        <div className="address-bar-icons">
+          <div className="arrows_block">
+            <img
+              className="adressbar_icon back_icon"
+              src={require(`./adressbar_big/arrow_back_24dp_000000_FILL0_wght400_GRAD0_opsz24.png`)}
+              alt=""
+            />
+            <img
+              className="adressbar_icon forward_icon"
+              src={require(`./adressbar_big/arrow_forward_24dp_898A8F_FILL0_wght400_GRAD0_opsz24.png`)}
+              alt=""
+            />
           </div>
-          <div className="search-bar">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="7.89"
-              height="7.887"
-              viewBox="0 0 16.89 16.887"
-            >
-              <path
-                id="Fill"
-                d="M16.006,16.887h0l-4.743-4.718a6.875,6.875,0,1,1,.906-.906l4.719,4.744-.88.88ZM6.887,1.262a5.625,5.625,0,1,0,5.625,5.625A5.631,5.631,0,0,0,6.887,1.262Z"
-                transform="translate(0.003 0)"
-              ></path>
-            </svg>
-            webcraftery.com
-            <div></div>
-          </div>
+          <img
+            className="adressbar_icon refresh_icon"
+            src={require(`./adressbar_big/refresh_24dp_000000_FILL0_wght400_GRAD0_opsz24.png`)}
+            alt=""
+          />
         </div>
+        <div className="address-bar-input">
+          <div className="left_blockside">
+            <img
+              className="input_icon adressbar_icon info_icon"
+              src={require(`./adressbar_big/page_info_24dp_000000_FILL0_wght400_GRAD0_opsz24.png`)}
+              alt=""
+            />
+            <div className="input_url">webcraftery.com</div>
+          </div>
+          <img
+            className="intput_icon adressbar_icon star_icon"
+            src={require(`./adressbar_big/star_24dp_666666_FILL0_wght400_GRAD0_opsz24.png`)}
+            alt=""
+          />
+        </div>
+        <img
+          className="adressbar_icon extention_icon"
+          src={require(`./adressbar_big/extension_24dp_000000_FILL0_wght400_GRAD0_opsz24.png`)}
+          alt=""
+        />
+        <img
+          className="adressbar_icon download_icon"
+          src={require(`./adressbar_big/download_24dp_000000_FILL0_wght400_GRAD0_opsz24.png`)}
+          alt=""
+        />
+        <img
+          className="adressbar_icon account_icon"
+          src={require(`./adressbar_big/account_circle_24dp_434343_FILL0_wght400_GRAD0_opsz24.png`)}
+          alt=""
+        />
+        <img
+          className="adressbar_icon more_icon"
+          src={require(`./adressbar_big/more_vert_24dp_000000_FILL0_wght400_GRAD0_opsz24.png`)}
+          alt=""
+        />
       </div>
       <iframe
         className="big_iframe"

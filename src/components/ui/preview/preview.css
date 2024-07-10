@@ -3,11 +3,11 @@
   height: 460px;
   width: 800px;
   border: 5px solid #191919;
-    overflow: hidden; 
+  overflow: hidden;
   position: relative;
 }
-.big_iframe{
-  overflow: auto; 
+.big_iframe {
+  overflow: auto;
 }
 .card {
   width: 100%;
@@ -80,7 +80,7 @@
 }
 
 .actionbar {
-    box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   font-family: "Roboto", "Ionicons", sans-serif !important;
   height: 22px;
@@ -99,13 +99,15 @@
 .actionbar .leftActions {
   left: 0;
 }
-.actionbar .rightActions, .actionbar .leftActions {
+.actionbar .rightActions,
+.actionbar .leftActions {
   position: absolute;
   display: flex;
   width: auto;
   height: 100%;
 }
-.actionbar .rightActions .item, .actionbar .leftActions .item {
+.actionbar .rightActions .item,
+.actionbar .leftActions .item {
   position: relative;
   display: inline-flex;
   width: auto;
@@ -115,24 +117,30 @@
   color: white;
   letter-spacing: 0.5px;
 }
-.actionbar .rightActions .item:not(.sActionbarNotifications).active, .actionbar .leftActions .item:not(.sActionbarNotifications).active {
-  background: #006AFF;
+.actionbar .rightActions .item:not(.sActionbarNotifications).active,
+.actionbar .leftActions .item:not(.sActionbarNotifications).active {
+  background: #006aff;
 }
-.actionbar .rightActions .item.sActionbarNotifications:active, .actionbar .leftActions .item.sActionbarNotifications:active {
-  background: #006AFF;
+.actionbar .rightActions .item.sActionbarNotifications:active,
+.actionbar .leftActions .item.sActionbarNotifications:active {
+  background: #006aff;
 }
-.actionbar .rightActions .item.bold, .actionbar .leftActions .item.bold {
+.actionbar .rightActions .item.bold,
+.actionbar .leftActions .item.bold {
   font-weight: 600;
 }
-.actionbar .rightActions .item[data-trigger=sPanelLogOptions], .actionbar .leftActions .item[data-trigger=sPanelLogOptions] {
+.actionbar .rightActions .item[data-trigger="sPanelLogOptions"],
+.actionbar .leftActions .item[data-trigger="sPanelLogOptions"] {
   margin-left: 10px;
 }
-.actionbar .rightActions .item[data-trigger=sPanelLogOptions]:before, .actionbar .leftActions .item[data-trigger=sPanelLogOptions]:before {
+.actionbar .rightActions .item[data-trigger="sPanelLogOptions"]:before,
+.actionbar .leftActions .item[data-trigger="sPanelLogOptions"]:before {
   content: "";
   font-size: 20px;
   line-height: 24px;
 }
-.actionbar .rightActions .item[data-trigger=sPanelLogOptions]:after, .actionbar .leftActions .item[data-trigger=sPanelLogOptions]:after {
+.actionbar .rightActions .item[data-trigger="sPanelLogOptions"]:after,
+.actionbar .leftActions .item[data-trigger="sPanelLogOptions"]:after {
   content: "";
   position: absolute;
   left: -10px;
@@ -140,13 +148,20 @@
   width: 10px;
   height: 100%;
 }
-.actionbar .rightActions .item[data-trigger=sPanelNotifications], .actionbar .leftActions .item[data-trigger=sPanelNotifications] {
+.actionbar .rightActions .item[data-trigger="sPanelNotifications"],
+.actionbar .leftActions .item[data-trigger="sPanelNotifications"] {
   padding-right: 20px;
 }
-.actionbar .rightActions .item[data-trigger=sPanelNotifications]:before, .actionbar .leftActions .item[data-trigger=sPanelNotifications]:before {
+.actionbar .rightActions .item[data-trigger="sPanelNotifications"]:before,
+.actionbar .leftActions .item[data-trigger="sPanelNotifications"]:before {
   content: "";
 }
-.actionbar .rightActions .item[data-trigger=sPanelNotifications].hasNotifications:after, .actionbar .leftActions .item[data-trigger=sPanelNotifications].hasNotifications:after {
+.actionbar
+  .rightActions
+  .item[data-trigger="sPanelNotifications"].hasNotifications:after,
+.actionbar
+  .leftActions
+  .item[data-trigger="sPanelNotifications"].hasNotifications:after {
   content: "";
   position: absolute;
   bottom: 50%;
@@ -154,14 +169,16 @@
   width: 8px;
   height: 8px;
   border-radius: 100%;
-  background: #E53939;
+  background: #e53939;
 }
-.actionbar .rightActions .item[data-trigger=sPanelBluetooth]:before, .actionbar .leftActions .item[data-trigger=sPanelBluetooth]:before {
+.actionbar .rightActions .item[data-trigger="sPanelBluetooth"]:before,
+.actionbar .leftActions .item[data-trigger="sPanelBluetooth"]:before {
   content: "";
   font-size: 16px;
   line-height: 24px;
 }
-.actionbar .rightActions .item[data-trigger=sPanelBluetooth]:after, .actionbar .leftActions .item[data-trigger=sPanelBluetooth]:after {
+.actionbar .rightActions .item[data-trigger="sPanelBluetooth"]:after,
+.actionbar .leftActions .item[data-trigger="sPanelBluetooth"]:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -170,26 +187,50 @@
   height: 3px;
   border-radius: 100%;
   transform: translateY(-50%) translateX(-50%);
-  background: #FFF;
+  background: #fff;
   opacity: 0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35), 5px 0 0 0 white, 5px 0 0 1px rgba(0, 0, 0, 0.25), -5px 0 0 0 white, -5px 0 0 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35), 5px 0 0 0 white,
+    5px 0 0 1px rgba(0, 0, 0, 0.25), -5px 0 0 0 white,
+    -5px 0 0 1px rgba(0, 0, 0, 0.25);
 }
-.actionbar .rightActions .item[data-trigger=sPanelBluetooth][data-connected=true]:before, .actionbar .leftActions .item[data-trigger=sPanelBluetooth][data-connected=true]:before {
+.actionbar
+  .rightActions
+  .item[data-trigger="sPanelBluetooth"][data-connected="true"]:before,
+.actionbar
+  .leftActions
+  .item[data-trigger="sPanelBluetooth"][data-connected="true"]:before {
   opacity: 0.75;
 }
-.actionbar .rightActions .item[data-trigger=sPanelBluetooth][data-connected=true]:after, .actionbar .leftActions .item[data-trigger=sPanelBluetooth][data-connected=true]:after {
+.actionbar
+  .rightActions
+  .item[data-trigger="sPanelBluetooth"][data-connected="true"]:after,
+.actionbar
+  .leftActions
+  .item[data-trigger="sPanelBluetooth"][data-connected="true"]:after {
   opacity: 1;
 }
-.actionbar .rightActions .item[data-trigger=sPanelPower], .actionbar .leftActions .item[data-trigger=sPanelPower] {
+.actionbar .rightActions .item[data-trigger="sPanelPower"],
+.actionbar .leftActions .item[data-trigger="sPanelPower"] {
   padding-right: 36px;
 }
-.actionbar .rightActions .item[data-trigger=sPanelPower][sPowerShowPercentage=true], .actionbar .leftActions .item[data-trigger=sPanelPower][sPowerShowPercentage=true] {
+.actionbar
+  .rightActions
+  .item[data-trigger="sPanelPower"][sPowerShowPercentage="true"],
+.actionbar
+  .leftActions
+  .item[data-trigger="sPanelPower"][sPowerShowPercentage="true"] {
   padding-right: 46px;
 }
-.actionbar .rightActions .item[data-trigger=sPanelPower][sPowerShowPercentage=true]:before, .actionbar .leftActions .item[data-trigger=sPanelPower][sPowerShowPercentage=true]:before {
+.actionbar
+  .rightActions
+  .item[data-trigger="sPanelPower"][sPowerShowPercentage="true"]:before,
+.actionbar
+  .leftActions
+  .item[data-trigger="sPanelPower"][sPowerShowPercentage="true"]:before {
   content: attr(data-percentage) "%";
 }
-.actionbar .rightActions .item[data-trigger=sPanelPower] i, .actionbar .leftActions .item[data-trigger=sPanelPower] i {
+.actionbar .rightActions .item[data-trigger="sPanelPower"] i,
+.actionbar .leftActions .item[data-trigger="sPanelPower"] i {
   position: absolute;
   top: calc(50% - 6px);
   right: 12px;
@@ -198,7 +239,8 @@
   border-radius: 3px;
   box-shadow: inset 0 0 0 1px white;
 }
-.actionbar .rightActions .item[data-trigger=sPanelPower] i:after, .actionbar .leftActions .item[data-trigger=sPanelPower] i:after {
+.actionbar .rightActions .item[data-trigger="sPanelPower"] i:after,
+.actionbar .leftActions .item[data-trigger="sPanelPower"] i:after {
   content: "";
   position: absolute;
   top: calc(50% - 4px);
@@ -209,7 +251,8 @@
   background: white;
   border-radius: 1px;
 }
-.actionbar .rightActions .item[data-trigger=sPanelPower] i:before, .actionbar .leftActions .item[data-trigger=sPanelPower] i:before {
+.actionbar .rightActions .item[data-trigger="sPanelPower"] i:before,
+.actionbar .leftActions .item[data-trigger="sPanelPower"] i:before {
   content: "";
   position: absolute;
   top: calc(50% - 2px);
@@ -227,3 +270,61 @@
   box-shadow: none;
 }
 
+.address-bar {
+  display: flex;
+  align-items: center;
+  background-color: #d9dadf;
+  padding: 4px 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.address-bar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.address-bar-input {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 580px;
+  height: 23px;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+}
+
+.arrows_block {
+  justify-content: space-between;
+  display: flex;
+  width: 48px;
+}
+.adressbar_icon {
+  width: 16px;
+}
+.refresh_icon {
+  margin-right: 17px;
+  margin-left: 15px;
+}
+.left_blockside {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5.5px;
+}
+.input_url {
+  margin-left: 10px;
+}
+.star_icon {
+  margin-right: 8px;
+}
+.extention_icon {
+  margin-left: 13px;
+}
+.account_icon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.download_icon {
+  margin-left: 10px;
+}
