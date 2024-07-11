@@ -24,7 +24,8 @@
         }
       }
     ]
-  },  {
+  },
+  {
     "title": "Sliders",
     "icon": "bi-gear-fill",
     "childrens": [
@@ -39,5 +40,21 @@
         }
       }
     ]
-  }
+  },
+    {
+      "title": "Footers",
+      "icon": "bi-gear-fill",
+      "childrens": [
+        {
+          "title": "Portfolio Footer",
+          "path": "/portfolio-footer",
+          "id": "portfolio-footer",
+          "code": {
+            "html": "<footer class=\"footer\">\n    <div class=\"container ft_container\">\n        <div class=\"cn_endblock\">\n            <div class=\"contact_endblock\">\n                <p class=\"contact\">Contact me</p>\n                <div class=\"ft_icons\">\n                    <img src=\"/elements_img/p_footer_icons/email-footer.png\" alt=\"Email Icon\" class=\"email_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/telegram-footer.png\" alt=\"Telegram Icon\" class=\"telegram_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/linkedin-footer.png\" alt=\"LinkedIn Icon\" class=\"linkedin_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/github-footer.png\" alt=\"GitHub Icon\" class=\"github_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/instagram-footer.png\" alt=\"Instagram Icon\" class=\"instagram_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/twitter-footer.png\" alt=\"Twitter Icon\" class=\"twitter_icon ft_icon icon\">\n                </div>\n                <p class=\"c_name\">© 2024 John Wick</p>\n            </div>\n            <div class=\"joinprojects_endblock\">\n                <h2 class=\"footer_jointitle\">Join my projects!</h2>\n                <p class=\"join_hope\">I am working on a lot of interesting projects, will glad u to join :></p>\n            </div>\n        </div>\n    </div>\n</footer>",
+            "css": "@import url(\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap\");\n@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');\n\nbody {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: 'Open Sans', sans-serif;\n}\n\n.ft_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  max-width: 1140px;\n  margin: 0 auto;\n  padding-right: 15px;\n  padding-left: 15px;\n}\n\n.footer {\n  min-height: 170px;\n  width: 100%;\n  background: #e1e1e1;\n}\n.ft_icons {\n  width: auto;\n  display: flex;\n  align-items: center;\n  margin-left: auto;\n}\n\n.ft_icon {\n  width: 25px;\n  height: 25px;\n  margin-right: 10px;\n}\n.ft_icon:last-child {\n  margin-right: 0;\n  height: 1.4rem;\n}\n\n.ft_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.cn_endblock {\n  margin-top: 1.3rem;\n  min-height: 130px;\n  width: 75%;\n  border: 1px #000;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n}\n.contact {\n  font-family: \"Montserrat\", sans-serif;\n  font-optical-sizing: auto;\n  font-style: initial;\n  color: #404040;\n}\n.c_name {\n  font-size: 0.67rem;\n  color: #404040;\n  font-weight: lighter;\n}\n\n.email_icon {\n  width: 27px;\n  height: 22px;\n}\n\n.join_hope {\n  width: 20rem;\n}\n\n.icon {\n  transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */\n}\n\n.icon:hover {\n  transform: scale(1.1); /* Increase size by 10% on hover */\n}\n\n@media (max-width: 924px) {\n  .cn_endblock {\n    width: 85%;\n  }\n  .join_hope {\n    width: 17rem;\n  }\n}\n\n@media (max-width: 675px) {\n  .footer {\n    min-height: 150px;\n  }\n  .joinprojects_endblock {\n    display: none;\n  }\n  .contact {\n    display: flex;\n    justify-content: center;\n  }\n  .c_name {\n    display: flex;\n    justify-content: center;\n  }\n  .cn_endblock {\n    width: 100%;\n    justify-content: center;\n    margin-top: 1rem;\n  }\n}\n\n.joinprojects_endblock {\n  font-family: \"Montserrat\", sans-serif;\n  font-weight: lighter;\n  color: #404040;\n  font-style: light;\n}",
+            "js": ""
+          }
+        }
+      ]
+    }
 ]
