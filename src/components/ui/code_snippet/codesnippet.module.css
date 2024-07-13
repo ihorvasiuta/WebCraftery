@@ -32,8 +32,11 @@
   border-top-right-radius: 13px;
   color: #64b7e5;
   text-decoration: underline;
+  margin-left: 8.5px;
 }
-
+.filetab:first-child {
+  margin-left: 2px;
+}
 .filetab.active {
   background: rgb(30, 30, 30);
 }
@@ -65,7 +68,6 @@
 .tabs {
   width: 570px;
   display: flex;
-  justify-content: space-around;
 }
 
 @media screen and (max-width: 1300px) {
