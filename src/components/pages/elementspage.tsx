@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import CodeSnippet from "../ui/code_snippet/codesnippet";
 import ElementsList from "../ui/elements_list/elementslist";
 import DownloadBlock from "../ui/download_block/download_block";
+import DetailsBlock from "../ui/element_details_block/detailsblock";
 import RenderPreview from "../ui/preview/preview";
 import "./elementspage.css";
 import RenderPreviewPhone from "../ui/preview/preview_phone";
@@ -29,7 +30,7 @@ const ElementsPage: React.FC = () => {
   };
 
   return (
-    <div className="homepage">
+    <div className="elementspage">
       <div className="exp_group">
         <div className="elements_list">
           <ElementsList onSelect={handleSelectItem} />
@@ -38,13 +39,24 @@ const ElementsPage: React.FC = () => {
           {element ? (
             <>
               <div className="container">
-                <div className="preview_windows">
-                  <RenderPreview codes={element.code} />
-                  <RenderPreviewPhone codes={element.code} />
-                </div>
-                <div className="sources_block">
-                  <CodeSnippet codeExamples={element.code} />
-                  <DownloadBlock />
+                <div className="content_block">
+                  <div className="pr_windows_wrapper">
+                    <div className="preview_windows">
+                      <RenderPreview codes={element.code} />
+                      <RenderPreviewPhone codes={element.code} />
+                    </div>
+                  </div>
+                  <div className="sources_block">
+                    <CodeSnippet codeExamples={element.code} />
+                    <DownloadBlock />
+                  </div>
+                  <DetailsBlock
+                    details_data={{
+                      title: element.title,
+                      description: element.description,
+                      url: element.demo_url,
+                    }}
+                  />
                 </div>
               </div>
             </>

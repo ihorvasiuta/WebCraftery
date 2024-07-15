@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+.details_block {
+  margin-top: 30px;
+  font-family: "Google Sans", sans-serif;
+  background: #ffffff;
+  min-height: 450px;
+  max-width: 1000px;
+  padding: 19px;
+  color: black;
+  border-radius: 26px;
+}
+.details_title {
+  text-decoration: underline;
+  color: black;
+  font-size: 20px;
+}
+.exampleofusage_block {
+  border-radius: 15px;
+  padding: 30px 30px;
+  background-color: #eeeeee;
+  width: 300px;
+  height: 125px;
+}
+.exampleofusage_text {
+  color: black;
+  margin-bottom: 13px;
+}
+.description_block {
+  max-width: 450px;
+}
+.important_part {
+  padding: 20px 30px;
+  font-family: "Inter", sans-serif;
+  border-radius: 22px;
+  background: #eaeaea;
+  width: 100%;
+  height: 170px;
+}
+.important_icon {
+  width: 23px;
+}
+.title_important {
+  margin-bottom: 10px;
+
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.important_text {
+  margin-right: 8px;
+}
+
+input[type="text"] {
+  margin-top: 6px;
+  color: rgb(200, 200, 200);
+  background: #1e1e1e;
+  width: 100%;
+  height: 28px;
+}
+.fr_action_block {
+  margin-bottom: 14px;
+}
