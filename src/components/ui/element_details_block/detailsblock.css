@@ -60,3 +60,40 @@ input[type="text"] {
 .fr_action_block {
   margin-bottom: 14px;
 }
+.mit_b_ic {
+    color: #323232;
+    width: 1rem;
+}
+.mit_tt_tx {
+    margin-left: 4px;
+    font-size: 4;
+    font-weight: 400;
+}
+.ttl {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.mit_l_bl {
+    font-family: "Montserrat", sans-serif;
+}
+.mit_tx_ara {
+    padding: 1.5rem !important;
+    border-radius: .75rem !important;
+    width: 450px;
+    height: 150px;
+    resize: none;
+}
+.custom_scrollbar::-webkit-scrollbar {
+    width: 5px;
+    background-color: #0000;
+}
+.custom_scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #404040;
+}
+.custom_scrollbar::-webkit-scrollbar-track {
+    background-color: #0000;
+    border-radius: 10px;
+}
