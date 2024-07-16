@@ -55,6 +55,12 @@ const ElementsPage: React.FC = () => {
                       title: element.title,
                       description: element.description,
                       url: element.demo_url,
+                      code: {
+                        html: element.code.html,
+                        css: element.code.css,
+                        js: element.code.js
+                      },
+                      important: element.important
                     }}
                   />
                 </div>

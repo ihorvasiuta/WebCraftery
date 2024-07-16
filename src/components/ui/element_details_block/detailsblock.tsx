@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "./detailsblock.css";
-import { Input } from "@material-tailwind/react";
 
 type DetailsData = {
   title: string;
   description: string;
   url: string;
+  code: {
+    html: string;
+    css: string;
+    js: string;
+  };
+  important?: string;
 };
 type DetailsProps = {
   details_data: DetailsData;
 };
 const DetailsBlock: React.FC<DetailsProps> = ({ details_data }) => {
   const [licenseText, setLicenseText] = useState<string>("");
+  const [procentage, setProzentage] = useState({ html: "", css: "", js: "" });
 
   useEffect(() => {
     const text = `Copyright - 2024 Rodrypaladin (David Rodríguez)
@@ -22,7 +28,18 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`;
     setLicenseText(text);
-  }, []);
+    const htmllen = details_data.code.html.length;
+    const csslen = details_data.code.css.length;
+    const jslen = details_data.code.js.length;
+    const totallen = htmllen + csslen + jslen;
+    if (totallen > 0) {
+      setProzentage({
+        html: `${Math.round((htmllen / totallen) * 100)}%`,
+        css: `${Math.round((csslen / totallen) * 100)}%`,
+        js: `${Math.round((jslen / totallen) * 100)}%`,
+      });
+    }
+  }, [details_data]);
   return (
     <div className="details_block">
       <div className="important_part">
@@ -34,26 +51,57 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
             alt=""
           />
         </div>
-        <div className="action_toadd_block">
-          <div className="fr_action_block">
-            <p>Add this to the head of html: </p>
-            <input
-              className="value_imput"
-              type="text"
-              value="<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>"
-              readOnly
-            />
+        {details_data.important && (
+          <div
+            className="important_content"
+            dangerouslySetInnerHTML={{ __html: details_data.important }}
+          />
+        )}
+      </div>
+      <div className="desc_content">
+        <div className="ttl_desc">
+          <h1 className="details_title">{details_data.title}</h1>
+          <p className="description_block">{details_data.description}</p>
+        </div>
+        <div className="vidn_cont">
+          <div className="skill-box">
+            <span className="tt">HTML</span>
+
+            <div className="skill-bar">
+              <span
+                className="skill-per html"
+                style={{ width: procentage.html }}
+              >
+                <span className="tooltip">{procentage.html}</span>
+              </span>
+            </div>
           </div>
-          <div className="sec_action_block">
-            <p>
-              In this element were used icons from boxicons so please don’t
-              forget to add this link to your html head.
-            </p>
+
+          <div className="skill-box">
+            <span className="tt">CSS</span>
+
+            <div className="skill-bar">
+              <span
+                className="skill-per scss"
+                style={{ width: procentage.css }}
+              >
+                <span className="tooltip">{procentage.css}</span>
+              </span>
+            </div>
+          </div>
+          <div className="skill-box">
+            <span className="tt">JS</span>
+            <div className="skill-bar">
+              <span
+                className="skill-per Boostrap"
+                style={{ width: procentage.js }}
+              >
+                <span className="tooltip">{procentage.js}</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-      <h1 className="details_title">{details_data.title}</h1>
-      <p className="description_block">{details_data.description}</p>
       <div className="sp_line"></div>
       <div className="cl_bl_gg">
         <div className="exampleofusage_block">

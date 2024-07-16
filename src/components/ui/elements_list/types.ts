@@ -6,9 +6,12 @@ export type Code = {
 
 export type ElementItem = {
   title: string;
+  description: string;
+  demo_url: string;
   path: string;
   id: string;
   code: Code;
+  important?: string;
 };
 
 export type Category = {
