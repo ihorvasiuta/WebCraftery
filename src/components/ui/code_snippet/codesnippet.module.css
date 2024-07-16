@@ -1,14 +1,13 @@
 .code_snippet {
   width: 800px;
-  height: 450px; /* Fixed height */
+  height: 450px;
   background: rgb(30, 30, 30);
   border-bottom-left-radius: 23px;
   border-top-left-radius: 23px;
-  overflow: hidden; /* Ensures no overflow is visible outside the container */
-  position: relative; /* Ensures absolute positioning is relative to this container */
+  overflow: hidden;
+  position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .filetabs {
   display: flex;
   background: #3a3a3a;
@@ -17,7 +16,6 @@
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
 }
-
 .filetab {
   display: flex;
   align-items: center;
@@ -40,36 +38,40 @@
 .filetab.active {
   background: rgb(30, 30, 30);
 }
-
-/* Additional styles can be added as needed */
-
-/* Specific style for the syntax-highlighted code area */
 .syntax_highlighter {
-  max-height: 380px; /* Adjusted height to allow for padding and tab height */
-  overflow: auto; /* Enables scroll within the syntax highlighter if content is too long */
-  padding: 10px; /* Padding for readability */
+  max-height: 380px;
+  overflow: auto;
+  padding: 10px;
 }
 .syntax_highlighter::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  height: 8px;
+  width: 8px;
+  background-color: transparent;
+  margin-right: 8px;
 }
 .syntax_highlighter::-webkit-scrollbar-thumb:hover {
   transition: 0.5s;
   background-color: rgb(126, 126, 126);
-  /* border-radius: 10px; */
 }
 .syntax_highlighter::-webkit-scrollbar-thumb {
-  background-color: #717171;
-  /* border-radius: 10px; */
+  border-radius: 10px;
+  background-color: #4f4f4f;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.syntax_highlighter::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+  height: 4px;
+  margin: 8px;
 }
 .icon_style {
   padding-left: 20px;
 }
-
 .tabs {
   width: 570px;
   display: flex;
 }
-
 @media screen and (max-width: 1300px) {
   .code_snippet {
     border-radius: 0px;
@@ -77,37 +79,25 @@
     border-top-right-radius: 23px;
   }
 }
-
-
-/* tooltip settings 👇 */
-
 .copy {
   /* button */
   --button-bg: #353434;
   --button-hover-bg: #464646;
-  --button-text-color: #CCCCCC;
+  --button-text-color: #cccccc;
   --button-hover-text-color: #8bb9fe;
   --button-border-radius: 10px;
   --button-diameter: 36px;
   --button-outline-width: 1px;
   --button-outline-color: rgb(141, 141, 141);
-  /* tooltip */
   --tooltip-bg: #f4f3f3;
   --toolptip-border-radius: 4px;
   --tooltip-font-family: Menlo, Roboto Mono, monospace;
-  /* 👆 this field should not be empty */
   --tooltip-font-size: 12px;
-  /* 👆 this field should not be empty */
   --tootip-text-color: rgb(50, 50, 50);
   --tooltip-padding-x: 7px;
   --tooltip-padding-y: 7px;
   --tooltip-offset: 8px;
-  /* --tooltip-transition-duration: 0.3s; */
-  /* 👆 if you need a transition, 
-  just remove the comment,
-  but I didn't like the transition :| */
 }
-
 .copy {
   box-sizing: border-box;
   width: var(--button-diameter);
@@ -120,7 +110,6 @@
   position: relative;
   outline: none;
 }
-
 .tooltip {
   position: absolute;
   opacity: 0;
@@ -135,13 +124,12 @@
   padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
   border-radius: var(--toolptip-border-radius);
   pointer-events: none;
-  transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all var(--tooltip-transition-duration)
+    cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-
 .tooltip::before {
   content: attr(data-text-initial);
 }
-
 .tooltip::after {
   content: "";
   position: absolute;
@@ -154,48 +142,37 @@
   z-index: -999;
   pointer-events: none;
 }
-
 .copy svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .checkmark {
   display: none;
 }
-
-/* actions */
-
 .copy:hover .tooltip,
 .copy:focus:not(:focus-visible) .tooltip {
   opacity: 1;
   visibility: visible;
   top: calc((100% + var(--tooltip-offset)) * -1);
 }
-
 .copy:focus:not(:focus-visible) .tooltip::before {
   content: attr(data-text-end);
 }
-
 .copy:focus:not(:focus-visible) .clipboard {
   display: none;
 }
-
 .copy:focus:not(:focus-visible) .checkmark {
   display: block;
 }
-
 .copy:hover,
 .copy:focus {
   background-color: var(--button-hover-bg);
 }
-
 .copy:active {
   outline: var(--button-outline-width) solid var(--button-outline-color);
 }
-
 .copy:hover svg {
   color: var(--button-hover-text-color);
 }
