@@ -86,19 +86,24 @@
   --button-text-color: #cccccc;
   --button-hover-text-color: #8bb9fe;
   --button-border-radius: 10px;
-  --button-diameter: 36px;
+  --button-diameter: 32px;
   --button-outline-width: 1px;
   --button-outline-color: rgb(141, 141, 141);
+  /* tooltip */
   --tooltip-bg: #f4f3f3;
   --toolptip-border-radius: 4px;
   --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
   --tooltip-font-size: 12px;
+  /* 👆 this field should not be empty */
   --tootip-text-color: rgb(50, 50, 50);
-  --tooltip-padding-x: 7px;
-  --tooltip-padding-y: 7px;
+  --tooltip-padding-x: -7px;
+  --tooltip-padding-y: -7px;
   --tooltip-offset: 8px;
 }
 .copy {
+  left: 170px;
+  bottom: 4px;
   box-sizing: border-box;
   width: var(--button-diameter);
   height: var(--button-diameter);
