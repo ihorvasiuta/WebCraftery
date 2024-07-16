@@ -3,12 +3,12 @@ body {
   height: 100%;
 }
 .iphone {
-  border: 5px solid black;
+  border: 7px solid black;
   border-radius: 37px;
   width: 270px;
   height: 460px;
   position: relative;
-  box-shadow: 0px 20px 15px #33333335;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
   background-color: rgb(255, 255, 255);
 }
 .iphone_inner {
@@ -150,7 +150,7 @@ body {
 .btn3 {
   height: 45px;
   top: 30%;
-  right: -7.2px;
+  right: -8.8px;
   background-image: linear-gradient(
     to right,
     #111111,
@@ -164,7 +164,7 @@ body {
 .btn2,
 .btn3 {
   transform: scale(-1);
-  left: -6.5px;
+  left: -8.7px;
 }
 
 .btn2,

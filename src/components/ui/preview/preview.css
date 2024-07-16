@@ -2,11 +2,11 @@
   border-radius: 30px;
   height: 460px;
   width: 800px;
-  border: 5px solid #191919;
+  border: 7px solid #191919;
   overflow: hidden;
   position: relative;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 20px 15px #33333335;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
 }
 .big_iframe {
   overflow: auto;
