@@ -2,62 +2,71 @@ import React, { useState } from "react";
 import "./download_block.css";
 
 const DownloadBlock: React.FC = () => {
-  const [feedback, setFeedback] = useState(null);
+  const [feedback, setFeedback] = useState<string | null>(null);
 
-  const handleFeedback = (type: any) => {
+  const handleFeedback = (type: string) => {
     setFeedback(type);
-    // Optionally, send this feedback to the server here
-    console.log(`User feedback: ${type}`); // Just for demonstration
+    console.log(`User feedback: ${type}`);
   };
+
+  const handleDownload = (type: string) => {
+    console.log(`Downloading: ${type}`);
+    // Implement the download logic or link to the download logic here.
+  };
+
   return (
     <div className="download_block">
       <div className="docs_title">
-        <h3>Docs</h3>
+        <h3>Docs & Downloads</h3>
       </div>
-      <div className="tell_block">
+      <div className="gbrtc_blbl">
         <div className="copyordown_block">
-          <p className="copyordown_text">
-            Copy Code munually or
-            <br />
-            Download Documents
+          <p className="fr_instr_text">
+            You can copy code manually, download icons/images separately, or
+            download the entire project:
           </p>
-          <a className="button_strg" download>
-            <span className="button__text">Download</span>
-            <span className="button__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 35 35"
-                id="bdd05811-e15d-428c-bb53-8661459f9307"
-                data-name="Layer 2"
-                className="svg"
-              >
-                <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
-                <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
-                <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
-              </svg>
-            </span>
-          </a>
-          <div className="underdown_line"></div>
-        </div>
-        <div className="share_block">
-          <p className="share_text">
-            we will be glad if
-            <br />
-            you share it!
-          </p>
-          <a className="button_strg" download>
-            <span className="button__text">Share</span>
-            <span className="button__icon">
-              <svg
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon_share"
-              >
-                <path d="M307 34.8c-11.5 5.1-19 16.6-19 29.2v64H176C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96h96v64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"></path>
-              </svg>
-            </span>
-          </a>
-          <div className="underdown_line"></div>
+          <div className="download_options">
+            <button
+              className="dwnld_btn"
+              type="button"
+              onClick={() => handleDownload("project")}
+            >
+              <span className="dwnld_txt">Project</span>
+              <span className="dwnld_ic">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 35 35"
+                  id="bdd05811-e15d-428c-bb53-8661459f9307"
+                  data-name="Layer 2"
+                  className="dwnld_svg"
+                >
+                  <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
+                  <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
+                  <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
+                </svg>
+              </span>
+            </button>
+            <button
+              className="dwnld_btn"
+              type="button"
+              onClick={() => handleDownload("icons&img")}
+            >
+              <span className="dwnld_txt">Icons&Img</span>
+              <span className="dwnld_ic">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 35 35"
+                  id="bdd05811-e15d-428c-bb53-8661459f9307"
+                  data-name="Layer 2"
+                  className="dwnld_svg"
+                >
+                  <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
+                  <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
+                  <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
+                </svg>
+              </span>
+            </button>
+          </div>
         </div>
         <div className="feedback">
           <p>Was it helpful?</p>
@@ -68,7 +77,17 @@ const DownloadBlock: React.FC = () => {
               }`}
               onClick={() => handleFeedback("like")}
             >
-              👍 Like
+              <svg
+                className="dlk_ic lk_ic"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#999999"
+              >
+                <path d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z" />
+              </svg>{" "}
+              Like
             </button>
             <button
               className={`dislike-button ${
@@ -76,7 +95,17 @@ const DownloadBlock: React.FC = () => {
               }`}
               onClick={() => handleFeedback("dislike")}
             >
-              👎 Dislike
+              <svg
+                className="dlk_ic"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#999999"
+              >
+                <path d="M240-840h440v520L400-40l-50-50q-7-7-11.5-19t-4.5-23v-14l44-174H120q-32 0-56-24t-24-56v-80q0-7 2-15t4-15l120-282q9-20 30-34t44-14Zm360 80H240L120-480v80h360l-54 220 174-174v-406Zm0 406v-406 406Zm80 34v-80h120v-360H680v-80h200v520H680Z" />
+              </svg>
+              Dislike
             </button>
           </div>
         </div>
