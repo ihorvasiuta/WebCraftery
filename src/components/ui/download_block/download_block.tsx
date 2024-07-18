@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import "./download_block.css";
 
-const DownloadBlock: React.FC = () => {
+type DownloadExamples = {
+  projectpath: string;
+  images: boolean;
+}
+type DownloadProps = {
+  downloadexamples: DownloadExamples;
+};
+const DownloadBlock: React.FC<DownloadProps> = ({ downloadexamples }) => {
   const [feedback, setFeedback] = useState<string | null>(null);
 
   const handleFeedback = (type: string) => {
@@ -10,8 +17,28 @@ const DownloadBlock: React.FC = () => {
   };
 
   const handleDownload = (type: string) => {
-    console.log(`Downloading: ${type}`);
-    // Implement the download logic or link to the download logic here.
+      let filePath = "";
+      switch (type) {
+        case "project":
+          filePath = `${downloadexamples.projectpath}.zip`;
+          break;
+        case "icons&img":
+          if (downloadexamples.images) {
+            filePath = `${downloadexamples.projectpath}.zip/images_icons`;
+          }
+          break;
+        default:
+          console.log("No file type specified");
+          return;
+      }
+
+      if (filePath) {
+        const link = document.createElement("a");
+        link.href = filePath;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
   };
 
   return (

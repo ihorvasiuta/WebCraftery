@@ -23,6 +23,7 @@
   margin-bottom: 10px;
 }
 .feedback {
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji" !important;
   color: #ffffff;
   background: #282828;
   border-radius: 7px;

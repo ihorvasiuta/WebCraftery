@@ -12,6 +12,8 @@ export type ElementItem = {
   id: string;
   code: Code;
   important?: string;
+  download_path?: string;
+  images?: boolean;
 };
 
 export type Category = {

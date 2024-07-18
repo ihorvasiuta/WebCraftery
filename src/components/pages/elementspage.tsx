@@ -48,7 +48,10 @@ const ElementsPage: React.FC = () => {
                   </div>
                   <div className="sources_block">
                     <CodeSnippet codeExamples={element.code} />
-                    <DownloadBlock />
+                    <DownloadBlock downloadexamples={{
+                      projectpath: element.download_path || "",
+                      images: element.images || false
+                    }} />
                   </div>
                   <DetailsBlock
                     details_data={{
