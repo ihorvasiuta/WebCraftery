@@ -13,7 +13,10 @@ export type ElementItem = {
   code: Code;
   important?: string;
   download_path?: string;
+  images_path?: string;
   images?: boolean;
+  clone_url?: string;
+  visit_url?: string;
 };
 
 export type Category = {

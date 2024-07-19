@@ -1,0 +1,252 @@
+.downloadwgit_block {
+  margin-top: 15px;
+  min-height: 200px;
+  max-width: 1080px;
+  background-color: #282828;
+  border-radius: 7px;
+  padding: 15px 25px;
+  color: white;
+}
+.content_wgithub_block {
+  display: flex;
+  justify-content: space-between;
+}
+.down_with_git_text {
+  font-size: 17.5px;
+  font-weight: 550;
+  margin-left: 8px;
+}
+.withgit_title {
+  display: flex;
+  align-items: center;
+}
+.block_wthcomm {
+  max-width: 600px;
+  min-height: 100px;
+  margin-top: 25px;
+}
+.wthcomm_text {
+  margin-bottom: 10px;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 530px;
+  gap: 1rem;
+  position: relative;
+  z-index: 10;
+  border: 0.5px solid #525252;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.terminal {
+  display: flex;
+  flex-direction: column;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+.headofterminal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 30px;
+  padding-inline: 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #202425;
+}
+.title_terminal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 2.5rem;
+  user-select: none;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #8e8e8e;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow-x: auto;
+  padding: 0.35rem;
+  line-height: 19px;
+  color: white;
+  background-color: black;
+  white-space: nowrap;
+}
+.pre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-wrap: nowrap;
+  white-space: pre;
+  background-color: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.pre code:nth-child(1) {
+  color: #575757;
+}
+.pre code:nth-child(2) {
+  color: #ffd02e;
+}
+.cmd {
+  height: 19px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.cmd::before {
+  content: attr(data-cmd);
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  animation: inputs 19.5s steps(56) infinite;
+}
+.cmd::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  border-right: 0.15em solid #959595;
+  animation: cursor 0.5s step-end infinite alternate, blinking 0.5s infinite;
+}
+
+@keyframes blinking {
+  20%,
+  80% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+}
+@keyframes cursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+@keyframes inputs {
+  0%,
+  100% {
+    width: 0;
+  }
+  10%,
+  70% {
+    width: 600px;
+    max-width: max-content;
+  }
+}
+@keyframes clipboard-check {
+  100% {
+    color: #fff;
+    d: path(
+      "M 9 5 H 7 a 2 2 0 0 0 -2 2 v 12 a 2 2 0 0 0 2 2 h 10 a 2 2 0 0 0 2 -2 V 7 a 2 2 0 0 0 -2 -2 h -2 M 9 5 a 2 2 0 0 0 2 2 h 2 a 2 2 0 0 0 2 -2 M 9 5 a 2 2 0 0 1 2 -2 h 2 a 2 2 0 0 1 2 2 m -6 9 l 2 2 l 4 -4"
+    );
+  }
+}
+
+.wtc_onhub {
+  width: 130px;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  gap: 15px;
+  background-color: #181717;
+  outline: 2px #181717 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.wtc_onhub .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.wtc_onhub svg path {
+  transition: 400ms;
+}
+
+.wtc_onhub:hover {
+  background-color: #ffffff;
+}
+
+.wtc_onhub:hover .text {
+  color: #181717;
+}
+
+.wtc_onhub:hover svg path {
+  fill: #181717;
+}
+
+.project_btn {
+  margin-top: 1rem;
+}
+.rght_side_wbtn {
+  margin-right: 20px;
+  margin-top: 10px;
+  max-width: 350px;
+}
+.contributions_bl {
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1240px) {
+  .content_wgithub_block {
+    flex-direction: column;
+  }
+}
+
+.copy_button {
+  width: 50px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1px solid #606060;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.copy_text {
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(174, 174, 174);
+  background-color: rgb(53 52 52);
+}
+.copy_button:hover .copy_text {
+  background-color: rgb(64, 64, 64);
+}
+.copy_text:hover {
+  color: rgb(227, 227, 227);
+}
+.copy_button:hover {
+  background-color: rgb(87, 87, 87);
+}

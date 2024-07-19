@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import CodeSnippet from "../ui/code_snippet/codesnippet";
 import ElementsList from "../ui/elements_list/elementslist";
 import DownloadBlock from "../ui/download_block/download_block";
+import DownloadWithGitBlock from "../ui/download_withgit/downloadwgit_block";
 import DetailsBlock from "../ui/element_details_block/detailsblock";
 import RenderPreview from "../ui/preview/preview";
 import "./elementspage.css";
@@ -48,11 +49,16 @@ const ElementsPage: React.FC = () => {
                   </div>
                   <div className="sources_block">
                     <CodeSnippet codeExamples={element.code} />
-                    <DownloadBlock downloadexamples={{
-                      projectpath: element.download_path || "",
-                      images: element.images || false
-                    }} />
+                    <DownloadBlock
+                      downloadexamples={{
+                        projectpath: element.download_path || "",
+                        imagespath: element.images_path || "",
+                        images: element.images || false,
+                      }}
+                    />
                   </div>
+                  <DownloadWithGitBlock clone_url={element.clone_url || ""
+                  } visit_url={element.visit_url || ""}/>
                   <DetailsBlock
                     details_data={{
                       title: element.title,
@@ -61,9 +67,9 @@ const ElementsPage: React.FC = () => {
                       code: {
                         html: element.code.html,
                         css: element.code.css,
-                        js: element.code.js
+                        js: element.code.js,
                       },
-                      important: element.important
+                      important: element.important,
                     }}
                   />
                 </div>
