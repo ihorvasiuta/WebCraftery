@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./download_block.css";
 
 type DownloadExamples = {
-  projectpath: string;
-  images: boolean;
+  projectpath?: string;
+  imagespath?: string;
+  images?: boolean;
 }
 type DownloadProps = {
   downloadexamples: DownloadExamples;
@@ -20,11 +21,11 @@ const DownloadBlock: React.FC<DownloadProps> = ({ downloadexamples }) => {
       let filePath = "";
       switch (type) {
         case "project":
-          filePath = `${downloadexamples.projectpath}.zip`;
+          filePath = `${downloadexamples.projectpath}`;
           break;
-        case "icons&img":
+        case "imgs&icons":
           if (downloadexamples.images) {
-            filePath = `${downloadexamples.projectpath}.zip/images_icons`;
+            filePath = `${downloadexamples.imagespath}`;
           }
           break;
         default:
@@ -76,9 +77,9 @@ const DownloadBlock: React.FC<DownloadProps> = ({ downloadexamples }) => {
             <button
               className="dwnld_btn"
               type="button"
-              onClick={() => handleDownload("icons&img")}
+              onClick={() => handleDownload("imgs&icons")}
             >
-              <span className="dwnld_txt">Icons&Img</span>
+              <span className="dwnld_txt">Img&Icons</span>
               <span className="dwnld_ic">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
