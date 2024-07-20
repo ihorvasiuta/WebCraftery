@@ -98,7 +98,7 @@ const DownloadWithGitBlock: React.FC<DownloadWGitExamples> = ({clone_url, visit_
                 fill="white"
               ></path>
             </svg>
-            <p className="text">Visit</p>
+            <p className="text">View on Github</p>
           </a>
         </div>
       </div>

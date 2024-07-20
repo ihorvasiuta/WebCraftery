@@ -1,13 +1,14 @@
 .download_block {
+  border-left: 1px solid #868686;
   width: 280px;
-  background-color: #ffffff;
+  background-color: #3c3c3c;
   border-bottom-right-radius: 23px;
   border-top-right-radius: 23px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .docs_title {
   font-size: 17px;
-  color: #333;
+  color: #dddddd;
   margin-bottom: 20px;
   font-weight: 500;
   display: block;
@@ -23,7 +24,8 @@
   margin-bottom: 10px;
 }
 .feedback {
-  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji" !important;
+  font-family: Montserrat, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji" !important;
   color: #ffffff;
   background: #282828;
   border-radius: 7px;
