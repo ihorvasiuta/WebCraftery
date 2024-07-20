@@ -6,6 +6,7 @@ import DownloadBlock from "../ui/download_block/download_block";
 import DownloadWithGitBlock from "../ui/download_withgit/downloadwgit_block";
 import DetailsBlock from "../ui/element_details_block/detailsblock";
 import RenderPreview from "../ui/preview/preview";
+import QuickGuideBlock from "../ui/quickguide_block/quickguide";
 import "./elementspage.css";
 import RenderPreviewPhone from "../ui/preview/preview_phone";
 import elementsData from "../ui/elements_list/elementslist.json";
@@ -72,6 +73,7 @@ const ElementsPage: React.FC = () => {
                       important: element.important,
                     }}
                   />
+                  <QuickGuideBlock/>
                 </div>
               </div>
             </>
