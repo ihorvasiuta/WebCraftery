@@ -15,7 +15,7 @@
           "js": "const sections = document.querySelectorAll('section[id]');\n\nfunction scrollActive() {\n    const scrollY = window.pageYOffset;\n\n    sections.forEach(current => {\n        const sectionHeight = current.offsetHeight,\n            sectionTop = current.offsetTop - 50,\n            sectionId = current.getAttribute('id');\n\n        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {\n            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link');\n        } else {\n            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link');\n        }\n    });\n}\nwindow.addEventListener('scroll', scrollActive);\n\n/* CHANGE BACKGROUND HEADER */\nfunction scrollHeader() {\n    const header = document.getElementById('header');\n    // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag\n    if (this.scrollY >= 80) header.classList.add('scroll-header');\n    else header.classList.remove('scroll-header');\n}\nwindow.addEventListener('scroll', scrollHeader);\n\n/* HAMBURGER TOGGLE */\nconst hamburger = document.querySelector('.hamburger');\nconst navMenu = document.querySelector('.nav__menu');\nconst navLinks = document.querySelectorAll('.nav__link');\n\nhamburger.addEventListener('click', function() {\n    navMenu.classList.toggle('active');\n});\n\n// Close nav-menu when a nav-link is clicked\nnavLinks.forEach(link => {\n    link.addEventListener('click', () => {\n        if (navMenu.classList.contains('active')) {\n            navMenu.classList.remove('active');\n        }\n    });\n});"
         },
         "important": "<div class=\"action_toadd_block\"><div class=\"fr_action_block\"><p>Add this to the head of html: </p><input class=\"value_imput\" type=\"text\" value=\"<link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>\" readOnly/></div><div class=\"sec_action_block\"><p>In this element were used icons from boxicons so please don’t forget to add this link to your html head.</p></div></div>",
-        "download_path": "/downloads/classic_nav",
+        "download_path": "/downloads/classic_nav.zip",
         "images": false,
         "clone_url": "clone https://github.com/wyfir/classic_navbar.git",
         "visit_url": "https://github.com/wyfir/classic_navbar"
@@ -35,7 +35,7 @@
         "download_path": "/downloads/classic_nav",
         "images": false,
         "clone_url": "clone https://github.com/wyfir/classic_navbar.git",
-        "visit_url": "https://github.com/wyfir/classic_navbar"
+        "visit_url": "https://github.com/wyfir/classic_navbar.zip"
       }
     ]
   },
