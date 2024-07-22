@@ -5,10 +5,11 @@
   padding: 30px;
   margin-top: 20px;
   max-width: 1080px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 .quickguide_title {
+  font-weight: bold;
   font-size: 24px; /* Larger font for title */
   color: #333; /* Darker color for better readability */
   margin-bottom: 20px;
@@ -37,7 +38,7 @@
 }
 
 .extractall_img {
-    margin: 20px;
+  margin: 20px;
   max-width: 700px; /* Responsive width */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Soft rounded corners for the image */
@@ -70,9 +71,9 @@
   text-decoration: underline; /* Underline on hover for interaction */
 }
 .qickguide_step {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .issuesofdownload_block {
-    margin-top: 25px;
-    font-size: 13px;
+  margin-top: 25px;
+  font-size: 13px;
 }

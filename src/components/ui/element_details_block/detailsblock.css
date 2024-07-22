@@ -1,26 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 .details_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 30px;
   font-family: "Google Sans", sans-serif;
   background: #ffffff;
   min-height: 450px;
-  max-width: 1000px;
+  max-width: 1080px;
   padding: 19px;
   color: black;
   border-radius: 26px;
 }
 .details_title {
-  text-decoration: underline;
+  font-weight: bold;
   color: black;
   font-size: 20px;
 }
 .exampleofusage_block {
+      margin-top: 40px;
+    margin-right: 20px;
+  border-radius: 7px;
+  background-color: #282828;
   padding: 30px 30px;
   width: 300px;
   height: 125px;
 }
 .exampleofusage_text {
-  color: black;
+  color: rgb(236, 236, 236);
   margin-bottom: 13px;
 }
 .description_block {
@@ -29,7 +36,7 @@
   max-width: 450px;
 }
 .demo_url {
-  color: #3636a5;
+  color: #7d62e0;
   text-decoration: underline;
 }
 .important_part {
@@ -64,7 +71,7 @@ input[type="text"] {
   margin-bottom: 14px;
 }
 .mit_b_ic {
-  color: #323232;
+  color: #ededed;
   width: 1rem;
 }
 .mit_tt_tx {
@@ -75,7 +82,7 @@ input[type="text"] {
 .ttl {
   display: flex;
   align-items: center;
-  color: black;
+  color: rgb(229, 229, 229);
 }
 .mit_l_bl {
   margin-left: 23px;
@@ -83,6 +90,9 @@ input[type="text"] {
   margin-top: 15px;
 }
 .mit_tx_ara {
+  margin-bottom: 10px;
+  color: #ccc;
+    background: #282828;
   margin-top: 8px;
   white-space: pre-wrap;
   padding: 1.5rem;
@@ -112,7 +122,10 @@ input[type="text"] {
   margin: 4px;
 }
 .cl_bl_gg {
-  width: 90%;
+  margin-top: 20px;
+  border-radius: 7px;
+  background: #363636;
+width: 96%;
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
@@ -124,6 +137,7 @@ input[type="text"] {
   background: rgb(173, 173, 173);
 }
 .desc_content {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
