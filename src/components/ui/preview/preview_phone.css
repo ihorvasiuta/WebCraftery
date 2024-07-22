@@ -3,6 +3,7 @@ body {
   height: 100%;
 }
 .iphone {
+  overflow: hidden;
   border: 7px solid black;
   border-radius: 37px;
   width: 270px;
@@ -14,11 +15,9 @@ body {
 .iphone_inner {
   width: 100%;
   height: 100%;
-  border-radius: 37px;
   position: relative;
   box-shadow: 0px 20px 15px #33333335;
   background-color: rgb(255, 255, 255);
-  overflow: hidden;
 }
 .notch {
   z-index: 50;
@@ -56,10 +55,6 @@ body {
   height: 0.21rem;
   background: #333;
   border-radius: 0.2rem;
-}
-.iframe_window {
-  border-bottom-right-radius: 37px;
-  border-bottom-left-radius: 37px;
 }
 .status_bar {
   display: flex;
