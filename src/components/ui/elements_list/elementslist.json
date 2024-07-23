@@ -113,7 +113,7 @@
           "js": ""
         },
         "important": "<div class=\"action_toadd_block\"><div class=\"fr_action_block\"><p>Add this to the head of html: </p><input class=\"value_imput\" type=\"text\" value=\"<link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>\" readOnly/></div><div class=\"sec_action_block\"><p>In this element were used icons from boxicons so please don’t forget to add this link to your html head.</p></div></div>",
-        "download_path": "/downloads/classic_nav",
+        "download_path": "/downloads/classic_footer.zip",
         "images": false,
         "clone_url": "clone https://github.com/wyfir/portfolio_footer.git",
         "visit_url": "https://github.com/wyfir/portfolio_footer"
