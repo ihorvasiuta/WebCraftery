@@ -5,7 +5,7 @@
     "childrens": [
       {
         "title": "Classic Menu",
-        "description": "A traditional top navigation bar with responsive adjustments.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae fugiat laudantium praesentium laboriosam. Similique ipsum veritatis quasi qui. Explicabo molestias, debitis cumque eius animi, temporibus nam, dolore expedita repudiandae exercitationem tempore porro similique delectus deleniti ex veniam. Saepe, modi ratione! Unde fuga, doloribus provident a debitis necessitatibus quae, sed quibusdam, sunt earum nesciunt ad? Facilis, at similique ratione commodi minima tenetur cum veniam doloremque omnis saepe unde harum voluptatem maiores vel ipsa molestiae vitae esse! Totam, hic? Necessitatibus velit earum officia, accusantium dolore.",
+        "description": "The Classic Navigation Menu is a responsive bottom navigation bar designed to enhance user interfaces on various devices. It features smooth scroll effects, sticky headers, and a mobile-friendly hamburger menu. Developed with HTML, CSS, and JavaScript, this menu highlights active links for intuitive navigation and is customizable through CSS variables. With detailed integration instructions and open-source collaboration on GitHub, it's an ideal solution for developers seeking a professional, adaptable navigation solution.",
         "demo_url": "https://example.com/classic-menu",
         "path": "/classic-navbar",
         "id": "classic-navbar",
@@ -22,7 +22,7 @@
       },
       {
         "title": "Portfolio Menu",
-        "description": "",
+        "description": "The Portfolio Navbar is a customizable and mobile-friendly navigation bar optimized for portfolio websites. It includes built-in social media icons, smooth scrolling, and stylish animations. Developed using HTML, CSS, and JavaScript, this responsive navbar enhances user interaction with a clean and minimalist design. It is easy to integrate and adapt to various screen sizes, making it a versatile choice for any web project. The navbar supports social links for platforms like GitHub, LinkedIn, and Telegram, and offers straightforward setup instructions for quick implementation.",
         "demo_url": "https://example.com/classic-menu",
         "path": "/portfolio-navbar",
         "id": "portfolio-navbar",
@@ -39,7 +39,7 @@
       },
       {
         "title": "Sidebar menu",
-        "description": "",
+        "description": "The Sidebar Navbar is a responsive and mobile-friendly navigation component ideal for enhancing user experience on websites. It features a fixed sidebar that adjusts to various screen sizes and includes smooth scroll functionality for single-page applications. With sleek animations and a versatile hamburger menu, it shifts between a sidebar and a top navigation layout on smaller screens. Simple installation and usage instructions are provided, making it easy to integrate into any project. This navigation solution is perfect for developers looking to add functional, stylish navigation to their websites.",
         "demo_url": "https://example.com/classic-menu",
         "path": "/sidebar-navbar",
         "id": "sidebar-navbar",
@@ -56,7 +56,7 @@
       },
       {
         "title": "Bottom menu",
-        "description": "",
+        "description": "The Bottom Navigation Menu is a sleek and user-friendly navigation system designed for mobile web applications. It combines icons with optional text labels for optimal space usage and accessibility. Developed using HTML, CSS, and JavaScript, it features a mobile-optimized design with active section highlighting and customizable appearance through CSS variables. The menu is fully responsive and adaptable, making it ideal for mobile interfaces. Installation instructions and a live demo are available to help integrate this navigation solution seamlessly into any project.",
         "demo_url": "https://example.com/classic-menu",
         "path": "/bottom-navbar",
         "id": "bottom-navbar",
@@ -79,7 +79,7 @@
     "childrens": [
       {
         "title": "Classic Slider",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae fugiat laudantium praesentium laboriosam. Similique ipsum veritatis quasi qui. Explicabo molestias, debitis cumque eius animi, temporibus nam, dolore expedita repudiandae exercitationem tempore porro similique delectus deleniti ex veniam. Saepe, modi ratione! Unde fuga, doloribus provident a debitis necessitatibus quae, sed quibusdam, sunt earum nesciunt ad? Facilis, at similique ratione commodi minima tenetur cum veniam doloremque omnis saepe unde harum voluptatem maiores vel ipsa molestiae vitae esse! Totam, hic? Necessitatibus velit earum officia, accusantium dolore, voluptatum odio beatae amet totam asperiores laborum dolor suscipit veritatis, animi facilis maiores cumque ea? Perspiciatis, eaque.",
+        "description": "The Classic Slider is an easy-to-use and responsive slider featuring clear navigation arrows and dot indicators for image navigation. It's built with HTML, CSS, and JavaScript, ensuring smooth transitions and a responsive design that adjusts to various screen sizes. This slider includes fade-in animations for slides and auto-sliding functionality with a customizable timer. Simple to integrate and customize, it comes with detailed setup instructions, making it an excellent choice for web projects requiring dynamic image display.",
         "demo_url": "https://example.com/classic-menu",
         "path": "/classic-slider",
         "id": "classic-slider",
@@ -102,25 +102,8 @@
     "icon": "bi-gear-fill",
     "childrens": [
       {
-        "title": "Portfolio Footer",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae fugiat laudantium praesentium laboriosam. Similique ipsum veritatis quasi qui. Explicabo molestias, debitis cumque eius animi, temporibus nam, dolore expedita repudiandae exercitationem tempore porro similique delectus deleniti ex veniam. Saepe, modi ratione! Unde fuga, doloribus provident a debitis necessitatibus quae, sed quibusdam, sunt earum nesciunt ad? Facilis, at similique ratione commodi minima tenetur cum veniam doloremque omnis saepe unde harum voluptatem maiores vel ipsa molestiae vitae esse! Totam, hic? Necessitatibus velit earum officia, accusantium dolore, voluptatum odio beatae amet totam asperiores laborum dolor suscipit veritatis, animi facilis maiores cumque ea? Perspiciatis, eaque.",
-        "demo_url": "https://example.com/classic-menu",
-        "path": "/portfolio-footer",
-        "id": "portfolio-footer",
-        "code": {
-          "html": "<footer class=\"footer\">\n    <div class=\"container ft_container\">\n        <div class=\"cn_endblock\">\n            <div class=\"contact_endblock\">\n                <p class=\"contact\">Contact me</p>\n                <div class=\"ft_icons\">\n                    <img src=\"/elements_img/p_footer_icons/email-footer.png\" alt=\"Email Icon\" class=\"email_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/telegram-footer.png\" alt=\"Telegram Icon\" class=\"telegram_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/linkedin-footer.png\" alt=\"LinkedIn Icon\" class=\"linkedin_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/github-footer.png\" alt=\"GitHub Icon\" class=\"github_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/instagram-footer.png\" alt=\"Instagram Icon\" class=\"instagram_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/twitter-footer.png\" alt=\"Twitter Icon\" class=\"twitter_icon ft_icon icon\">\n                </div>\n                <p class=\"c_name\">© 2024 John Wick</p>\n            </div>\n            <div class=\"joinprojects_endblock\">\n                <h2 class=\"footer_jointitle\">Join my projects!</h2>\n                <p class=\"join_hope\">I am working on a lot of interesting projects, will glad u to join :></p>\n            </div>\n        </div>\n    </div>\n</footer>",
-          "css": "@import url(\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap\");\n@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');\n\nbody {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: 'Open Sans', sans-serif;\n}\n\n.ft_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  max-width: 1140px;\n  margin: 0 auto;\n  padding-right: 15px;\n  padding-left: 15px;\n}\n\n.footer {\n  min-height: 170px;\n  width: 100%;\n  background: #e1e1e1;\n}\n.ft_icons {\n  width: auto;\n  display: flex;\n  align-items: center;\n  margin-left: auto;\n}\n\n.ft_icon {\n  width: 25px;\n  height: 25px;\n  margin-right: 10px;\n}\n.ft_icon:last-child {\n  margin-right: 0;\n  height: 1.4rem;\n}\n\n.ft_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.cn_endblock {\n  margin-top: 1.3rem;\n  min-height: 130px;\n  width: 75%;\n  border: 1px #000;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n}\n.contact {\n  font-family: \"Montserrat\", sans-serif;\n  font-optical-sizing: auto;\n  font-style: initial;\n  color: #404040;\n}\n.c_name {\n  font-size: 0.67rem;\n  color: #404040;\n  font-weight: lighter;\n}\n\n.email_icon {\n  width: 27px;\n  height: 22px;\n}\n\n.join_hope {\n  width: 20rem;\n  font-weight: 250;\n}\n\n.icon {\n  transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */\n}\n\n.icon:hover {\n  transform: scale(1.1); /* Increase size by 10% on hover */\n}\n\n@media (max-width: 924px) {\n  .cn_endblock {\n    width: 85%;\n  }\n  .join_hope {\n    width: 17rem;\n  }\n}\n\n@media (max-width: 675px) {\n  .footer {\n    min-height: 150px;\n  }\n  .joinprojects_endblock {\n    display: none;\n  }\n  .contact {\n    display: flex;\n    justify-content: center;\n  }\n  .c_name {\n    display: flex;\n    justify-content: center;\n  }\n  .cn_endblock {\n    width: 100%;\n    justify-content: center;\n    margin-top: 1rem;\n  }\n}\n\n.joinprojects_endblock {\n  font-family: \"Montserrat\", sans-serif;\n  font-weight: lighter;\n  color: #404040;\n  font-style: light;\n}",
-          "js": ""
-        },
-        "important": "<div class=\"action_toadd_block\"><div class=\"fr_action_block\"><p>Add this to the head of html: </p><input class=\"value_imput\" type=\"text\" value=\"<link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>\" readOnly/></div><div class=\"sec_action_block\"><p>In this element were used icons from boxicons so please don’t forget to add this link to your html head.</p></div></div>",
-        "download_path": "/downloads/classic_nav",
-        "images": false,
-        "clone_url": "clone https://github.com/wyfir/portfolio_footer.git",
-        "visit_url": "https://github.com/wyfir/portfolio_footer"
-      },
-      {
         "title": "Classic Footer",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae fugiat laudantium praesentium laboriosam. Similique ipsum veritatis quasi qui. Explicabo molestias, debitis cumque eius animi, temporibus nam, dolore expedita repudiandae exercitationem tempore porro similique delectus deleniti ex veniam. Saepe, modi ratione! Unde fuga, doloribus provident a debitis necessitatibus quae, sed quibusdam, sunt earum nesciunt ad? Facilis, at similique ratione commodi minima tenetur cum veniam doloremque omnis saepe unde harum voluptatem maiores vel ipsa molestiae vitae esse! Totam, hic? Necessitatibus velit earum officia, accusantium dolore, voluptatum odio beatae amet totam asperiores laborum dolor suscipit veritatis, animi facilis maiores cumque ea? Perspiciatis, eaque.",
+        "description": "The Classic Footer is designed to enhance both the usability and aesthetics of websites, featuring a responsive and dynamic layout. This footer includes organized links for easy navigation, integrated social media icons, and sections for company information, making it versatile for various online platforms. Built with HTML and CSS, it ensures simplicity and ease of integration into any project. The footer is customizable through CSS variables and optimized for performance, providing a smooth user experience across different devices.",
         "demo_url": "https://example.com/classic-menu",
         "path": "/classic-footer",
         "id": "classic-footer",
@@ -131,6 +114,23 @@
         },
         "important": "<div class=\"action_toadd_block\"><div class=\"fr_action_block\"><p>Add this to the head of html: </p><input class=\"value_imput\" type=\"text\" value=\"<link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>\" readOnly/></div><div class=\"sec_action_block\"><p>In this element were used icons from boxicons so please don’t forget to add this link to your html head.</p></div></div>",
         "download_path": "/downloads/classic_footer.zip",
+        "images": false,
+        "clone_url": "clone https://github.com/wyfir/portfolio_footer.git",
+        "visit_url": "https://github.com/wyfir/portfolio_footer"
+      },
+      {
+        "title": "Portfolio Footer",
+        "description": "The Portfolio Footer is a sleek, modern footer designed specifically for personal portfolios. It features a responsive design that includes social media icons, a contact section, and an invitation to collaborate on projects. Built using HTML and CSS, this footer is easy to customize with CSS variables to match any design. It offers a straightforward setup process for quick integration into any web project, making it an excellent choice for developers looking to enhance the look and functionality of their portfolio sites.",
+        "demo_url": "https://example.com/classic-menu",
+        "path": "/portfolio-footer",
+        "id": "portfolio-footer",
+        "code": {
+          "html": "<footer class=\"footer\">\n    <div class=\"container ft_container\">\n        <div class=\"cn_endblock\">\n            <div class=\"contact_endblock\">\n                <p class=\"contact\">Contact me</p>\n                <div class=\"ft_icons\">\n                    <img src=\"/elements_img/p_footer_icons/email-footer.png\" alt=\"Email Icon\" class=\"email_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/telegram-footer.png\" alt=\"Telegram Icon\" class=\"telegram_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/linkedin-footer.png\" alt=\"LinkedIn Icon\" class=\"linkedin_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/github-footer.png\" alt=\"GitHub Icon\" class=\"github_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/instagram-footer.png\" alt=\"Instagram Icon\" class=\"instagram_icon ft_icon icon\">\n                    <img src=\"/elements_img/p_footer_icons/twitter-footer.png\" alt=\"Twitter Icon\" class=\"twitter_icon ft_icon icon\">\n                </div>\n                <p class=\"c_name\">© 2024 John Wick</p>\n            </div>\n            <div class=\"joinprojects_endblock\">\n                <h2 class=\"footer_jointitle\">Join my projects!</h2>\n                <p class=\"join_hope\">I am working on a lot of interesting projects, will glad u to join :></p>\n            </div>\n        </div>\n    </div>\n</footer>",
+          "css": "@import url(\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap\");\n@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');\n\nbody {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: 'Open Sans', sans-serif;\n}\n\n.ft_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  max-width: 1140px;\n  margin: 0 auto;\n  padding-right: 15px;\n  padding-left: 15px;\n}\n\n.footer {\n  min-height: 170px;\n  width: 100%;\n  background: #e1e1e1;\n}\n.ft_icons {\n  width: auto;\n  display: flex;\n  align-items: center;\n  margin-left: auto;\n}\n\n.ft_icon {\n  width: 25px;\n  height: 25px;\n  margin-right: 10px;\n}\n.ft_icon:last-child {\n  margin-right: 0;\n  height: 1.4rem;\n}\n\n.ft_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.cn_endblock {\n  margin-top: 1.3rem;\n  min-height: 130px;\n  width: 75%;\n  border: 1px #000;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n}\n.contact {\n  font-family: \"Montserrat\", sans-serif;\n  font-optical-sizing: auto;\n  font-style: initial;\n  color: #404040;\n}\n.c_name {\n  font-size: 0.67rem;\n  color: #404040;\n  font-weight: lighter;\n}\n\n.email_icon {\n  width: 27px;\n  height: 22px;\n}\n\n.join_hope {\n  width: 20rem;\n  font-weight: 250;\n}\n\n.icon {\n  transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */\n}\n\n.icon:hover {\n  transform: scale(1.1); /* Increase size by 10% on hover */\n}\n\n@media (max-width: 924px) {\n  .cn_endblock {\n    width: 85%;\n  }\n  .join_hope {\n    width: 17rem;\n  }\n}\n\n@media (max-width: 675px) {\n  .footer {\n    min-height: 150px;\n  }\n  .joinprojects_endblock {\n    display: none;\n  }\n  .contact {\n    display: flex;\n    justify-content: center;\n  }\n  .c_name {\n    display: flex;\n    justify-content: center;\n  }\n  .cn_endblock {\n    width: 100%;\n    justify-content: center;\n    margin-top: 1rem;\n  }\n}\n\n.joinprojects_endblock {\n  font-family: \"Montserrat\", sans-serif;\n  font-weight: lighter;\n  color: #404040;\n  font-style: light;\n}",
+          "js": ""
+        },
+        "important": "<div class=\"action_toadd_block\"><div class=\"fr_action_block\"><p>Add this to the head of html: </p><input class=\"value_imput\" type=\"text\" value=\"<link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>\" readOnly/></div><div class=\"sec_action_block\"><p>In this element were used icons from boxicons so please don’t forget to add this link to your html head.</p></div></div>",
+        "download_path": "/downloads/classic_nav",
         "images": false,
         "clone_url": "clone https://github.com/wyfir/portfolio_footer.git",
         "visit_url": "https://github.com/wyfir/portfolio_footer"
