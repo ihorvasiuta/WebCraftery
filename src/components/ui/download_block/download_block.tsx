@@ -23,7 +23,7 @@ const DownloadBlock: React.FC<DownloadProps> = ({ downloadexamples }) => {
         case "project":
           filePath = `${downloadexamples.projectpath}`;
           break;
-        case "imgs&icons":
+        case "imgs&icons" || "images":
           if (downloadexamples.images) {
             filePath = `${downloadexamples.imagespath}`;
           }
