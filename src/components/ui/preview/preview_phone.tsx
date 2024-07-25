@@ -88,6 +88,7 @@ const RenderPreviewPhone: React.FC<PreviewProps> = ({ codes }) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <style>
     ::-webkit-scrollbar {
         width: 5px;
@@ -109,6 +110,7 @@ const RenderPreviewPhone: React.FC<PreviewProps> = ({ codes }) => {
   </head>
   <body>
     ${codes.html}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav__link');

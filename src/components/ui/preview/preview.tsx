@@ -155,6 +155,7 @@ const RenderPreview: React.FC<PreviewProps> = ({ codes }) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <style>
       ::-webkit-scrollbar {
         width: 5px;
@@ -176,6 +177,7 @@ const RenderPreview: React.FC<PreviewProps> = ({ codes }) => {
   </head>
   <body>
     ${codes.html}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav__link');
@@ -199,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </html>
 `}
         style={{ width: "100%", height: "100%" }}
-        sandbox="allow-scripts allow-top-navigation-by-user-activation"
+        sandbox="allow-scripts allow-top-navigation-by-user-activation allow-same-origin allow-popups allow-forms"
         title="Preview Window"
       />
     </div>
