@@ -160,11 +160,11 @@
           "js": "var TrandingSlider = new Swiper('.tranding-slider', {\n  effect: 'coverflow',\n  grabCursor: true,\n  centeredSlides: true,\n  loop: true,\n  slidesPerView: 'auto',\n  coverflowEffect: {\n    rotate: 0,\n    stretch: 0,\n    depth: 100,\n    modifier: 2.5,\n  },\n  autoplay: {\n    delay: 2500,\n    disableOnInteraction: false,\n  },\n  pagination: {\n    el: '.swiper-pagination',\n    clickable: true,\n  },\n  navigation: {\n    nextEl: '.swiper-button-next',\n    prevEl: '.swiper-button-prev',\n  },\n});"
         },
         "important": "<div class=\"action_toadd_block\"><div class=\"fr_action_block\"><p>Add this to the head of html: </p><input class=\"value_imput\" type=\"text\" value=\"<link href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' rel='stylesheet'>\" readOnly/></div><div class=\"sec_action_block\"><p>In this element were used icons from boxicons so please don’t forget to add this link to your html head.</p></div></div>",
-        "download_path": "/downloads//3d_coverflow_slider//3d_coverflow_slider.zip",
-        "images_path": "/downloads/3d_coverflow_slider_gnr/images.zip",
+        "download_path": "/downloads/coverflow_slider_gnr/coverflow_slider.zip",
+        "images_path": "/downloads/coverflow_slider_gnr/images.zip",
         "images": true,
-        "clone_url": "clone https://github.com/wyfir/3d_coverflow_slider.git",
-        "visit_url": "https://github.com/wyfir/3d_coverflow_slider"
+        "clone_url": "clone https://github.com/wyfir/coverflow_slider.git",
+        "visit_url": "https://github.com/wyfir/coverflow_slider"
       }
     ]
   },
