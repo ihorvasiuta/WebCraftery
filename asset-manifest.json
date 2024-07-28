@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/WebCraftery/static/css/main.1314522f.css",
+    "main.js": "/WebCraftery/static/js/main.9f76b3a5.js",
+    "static/media/css_icon.svg": "/WebCraftery/static/media/css_icon.396a7870977eb0e16e11.svg",
+    "static/media/translate.png": "/WebCraftery/static/media/translate.66a21250b044a06a7668.png",
+    "static/media/refresh_icon.png": "/WebCraftery/static/media/refresh_icon.5b8d9bd333675db6afc8.png",
+    "static/media/js_icon.svg": "/WebCraftery/static/media/js_icon.949d89cd581547d5191c.svg",
+    "static/media/elements_icon.svg": "/WebCraftery/static/media/elements_icon.82d59a7351959f21a5ae371c59cd18fc.svg",
+    "index.html": "/WebCraftery/index.html",
+    "static/media/html_icon.svg": "/WebCraftery/static/media/html_icon.d206dd5277174ed6dfab.svg",
+    "main.1314522f.css.map": "/WebCraftery/static/css/main.1314522f.css.map",
+    "main.9f76b3a5.js.map": "/WebCraftery/static/js/main.9f76b3a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1314522f.css",
+    "static/js/main.9f76b3a5.js"
+  ]
+}
