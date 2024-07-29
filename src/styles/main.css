@@ -12,7 +12,7 @@
   --first-color-alt: hsl(var(--hue), var(--sat), 36%);
   --title-color: hsl(var(--hue), 12%, 15%);
   --text-color: hsl(var(--hue), 8%, 35%);
-  --body-color:#EFEFEF;
+  --body-color: #efefef;
   --container-color: #1d1d1d;
   --header-color: #191919;
   --light-balck-color: #202020;
@@ -85,6 +85,7 @@ main {
 .nav {
   height: var(--header-height);
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -116,7 +117,23 @@ main {
 .nav__link:hover {
   color: #f0f0f0;
 }
+.logo_list_wrapper {
+  display: flex;
+  align-items: center;
+}
+.social_icons_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
+}
+.nav_social_icon {
+  transition: transform 0.2s ease-in-out;
+}
 
+.nav_social_icon:hover {
+  transform: scale(1.1);
+}
 /* Active Link Styles */
 .active {
   color: #fff;
