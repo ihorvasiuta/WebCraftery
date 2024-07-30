@@ -47,9 +47,9 @@ const DownloadWithGitBlock: React.FC<DownloadWGitExamples> = ({clone_url, visit_
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
+                    strokeWidth="2"
                     stroke="currentColor"
                     fill="none"
                   >
