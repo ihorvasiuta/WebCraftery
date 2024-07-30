@@ -18,7 +18,30 @@ const ElementsPage: React.FC = () => {
   const { elementId } = useParams<{ elementId?: string }>();
   const [element, setElement] = useState<ElementItem | null>(null);
   const [codeData, setCodeData] = useState<any>(null);
+  function isAbsoluteUrl(url: string) {
+    return (
+      url.indexOf("http://") === 0 ||
+      url.indexOf("https://") === 0 ||
+      url.indexOf("//") === 0
+    );
+  }
 
+  // Function to update image URLs in JSON data
+  function processImageUrls(jsonData: any) {
+    return jsonData.map((item: any) => {
+      // Check if the image URL is absolute or relative
+      if (isAbsoluteUrl(item.imageUrl)) {
+        return item; // Use the absolute URL as is
+      } else {
+        return {
+          ...item,
+          imageUrl: `${process.env.PUBLIC_URL}${item.imageUrl}`, // Append the environment-specific base URL
+        };
+      }
+    });
+  }
+
+  const updatedData = processImageUrls(elementsData);
   useEffect(() => {
     if (elementId) {
       const selectedElement = elementsData
@@ -52,8 +75,8 @@ const ElementsPage: React.FC = () => {
                 <div className="content_block">
                   <div className="pr_windows_wrapper">
                     <div className="preview_windows">
-                      <RenderPreview codes={element.code} />
-                      <RenderPreviewPhone codes={element.code} />
+                      <RenderPreview codes={updatedData.code} />
+                      <RenderPreviewPhone codes={updatedData.code} />
                     </div>
                   </div>
                   <div className="sources_block">
