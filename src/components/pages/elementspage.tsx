@@ -10,12 +10,14 @@ import QuickGuideBlock from "../ui/quickguide_block/quickguide";
 import "./elementspage.css";
 import RenderPreviewPhone from "../ui/preview/preview_phone";
 import elementsData from "../ui/elements_list/elementslist.json";
+import snippetCodeData from "../ui/code_snippet/elementscode.json";
 import { ElementItem } from "../ui/elements_list/types";
 
 const ElementsPage: React.FC = () => {
   const navigate = useNavigate();
   const { elementId } = useParams<{ elementId?: string }>();
   const [element, setElement] = useState<ElementItem | null>(null);
+  const [codeData, setCodeData] = useState<any>(null);
 
   useEffect(() => {
     if (elementId) {
@@ -23,8 +25,14 @@ const ElementsPage: React.FC = () => {
         .flatMap((cat) => cat.childrens)
         .find((child) => child.id === elementId);
       setElement(selectedElement || null);
+
+      const selectedCode = snippetCodeData.find(
+        (item) => item.id === elementId
+      );
+      setCodeData(selectedCode?.code || null);
     } else {
       setElement(null);
+      setCodeData(null);
     }
   }, [elementId]);
   const handleSelectItem = (item: ElementItem) => {
@@ -49,7 +57,7 @@ const ElementsPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="sources_block">
-                    <CodeSnippet codeExamples={element.code} />
+                    <CodeSnippet codeExamples={codeData} />
                     <DownloadBlock
                       downloadexamples={{
                         projectpath: element.download_path || "",
@@ -58,8 +66,10 @@ const ElementsPage: React.FC = () => {
                       }}
                     />
                   </div>
-                  <DownloadWithGitBlock clone_url={element.clone_url || ""
-                  } visit_url={element.visit_url || ""}/>
+                  <DownloadWithGitBlock
+                    clone_url={element.clone_url || ""}
+                    visit_url={element.visit_url || ""}
+                  />
                   <DetailsBlock
                     details_data={{
                       title: element.title,
@@ -73,7 +83,7 @@ const ElementsPage: React.FC = () => {
                       important: element.important,
                     }}
                   />
-                  <QuickGuideBlock/>
+                  <QuickGuideBlock />
                 </div>
               </div>
             </>
