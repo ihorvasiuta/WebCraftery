@@ -3,8 +3,8 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <>
-      <footer className="footer section">
-        <div className="footer__container container grid">
+      <footer className="footer">
+        <div className="footer__container">
           <div className="footer__content">
             <h3 className="footer__title">Quick Links</h3>
             <ul className="footer__links">
