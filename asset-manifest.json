@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/WebCraftery/static/css/main.a90ae411.css",
-    "main.js": "/WebCraftery/static/js/main.8eaf71c6.js",
+    "main.css": "/WebCraftery/static/css/main.e324961c.css",
+    "main.js": "/WebCraftery/static/js/main.44c4a5ec.js",
     "static/media/css_icon.svg": "/WebCraftery/static/media/css_icon.396a7870977eb0e16e11.svg",
     "static/media/translate.png": "/WebCraftery/static/media/translate.66a21250b044a06a7668.png",
     "static/media/refresh_icon.png": "/WebCraftery/static/media/refresh_icon.5b8d9bd333675db6afc8.png",
@@ -9,11 +9,11 @@
     "static/media/elements_icon.svg": "/WebCraftery/static/media/elements_icon.82d59a7351959f21a5ae371c59cd18fc.svg",
     "index.html": "/WebCraftery/index.html",
     "static/media/html_icon.svg": "/WebCraftery/static/media/html_icon.d206dd5277174ed6dfab.svg",
-    "main.a90ae411.css.map": "/WebCraftery/static/css/main.a90ae411.css.map",
-    "main.8eaf71c6.js.map": "/WebCraftery/static/js/main.8eaf71c6.js.map"
+    "main.e324961c.css.map": "/WebCraftery/static/css/main.e324961c.css.map",
+    "main.44c4a5ec.js.map": "/WebCraftery/static/js/main.44c4a5ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.a90ae411.css",
-    "static/js/main.8eaf71c6.js"
+    "static/css/main.e324961c.css",
+    "static/js/main.44c4a5ec.js"
   ]
 }
