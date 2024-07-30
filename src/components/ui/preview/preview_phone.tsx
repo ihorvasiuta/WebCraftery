@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./preview_phone.css";
 
 type RenderPreviewProps = {
@@ -10,38 +10,6 @@ type PreviewProps = {
   codes: RenderPreviewProps;
 };
 const RenderPreviewPhone: React.FC<PreviewProps> = ({ codes }) => {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  // Function to handle internal navigation
-  const handleNavigation = (e: any) => {
-    e.preventDefault(); // Prevent default link behavior
-    e.stopPropagation(); // Stop the event from bubbling up to the parent
-    const targetId = e.target.getAttribute("href").slice(1); // Remove the '#' to get the ID
-    const targetElement =
-      iframeRef.current?.contentWindow?.document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  // Effect to attach event listeners to links
-  useEffect(() => {
-    const iframeDocument = iframeRef.current?.contentDocument;
-    if (iframeDocument) {
-      const links = iframeDocument.querySelectorAll('a[href^="#"]');
-      links.forEach((link) => {
-        link.addEventListener("click", handleNavigation);
-      });
-
-      // Cleanup
-      return () => {
-        links.forEach((link) => {
-          link.removeEventListener("click", handleNavigation);
-        });
-      };
-    }
-  }, [codes]); // Dependency on `codes` to re-apply when content changes
-
   return (
     <div className="iphone">
       <div className="btn1"></div>
@@ -136,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </html>
 `}
               style={{ width: "100%", height: "396px" }}
-              sandbox="allow-scripts"
+              sandbox="allow-scripts allow-top-navigation-by-user-activation"
               title="Preview Window"
             />
           </div>

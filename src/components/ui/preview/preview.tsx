@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import "./preview.css";
 
 type RenderPreviewProps = {
@@ -10,37 +10,6 @@ type PreviewProps = {
   codes: RenderPreviewProps;
 };
 const RenderPreview: React.FC<PreviewProps> = ({ codes }) => {
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  const handleNavigation = (e: any) => {
-    e.preventDefault(); // Prevent default link behavior
-    e.stopPropagation(); // Stop the event from bubbling up to the parent
-    const targetId = e.target.getAttribute("href").slice(1); // Remove the '#' to get the ID
-    const targetElement =
-      iframeRef.current?.contentWindow?.document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  // Effect to attach event listeners to links
-  useEffect(() => {
-    const iframeDocument = iframeRef.current?.contentDocument;
-    if (iframeDocument) {
-      const links = iframeDocument.querySelectorAll('a[href^="#"]');
-      links.forEach((link) => {
-        link.addEventListener("click", handleNavigation);
-      });
-
-      // Cleanup
-      return () => {
-        links.forEach((link) => {
-          link.removeEventListener("click", handleNavigation);
-        });
-      };
-    }
-  }, [codes]); // Dependency on `codes` to re-apply when content changes
-
   return (
     <div className="preview_window_big">
       <div className="actionbar">
@@ -203,8 +172,8 @@ document.addEventListener('DOMContentLoaded', function() {
   </body>
   </html>
 `}
-        style={{ width: "100%", height: "100%" }}
-        sandbox="allow-scripts allow-top-navigation-by-user-activation allow-same-origin allow-popups allow-forms"
+        style={{ width: "100%", height: "397px" }}
+        sandbox="allow-scripts allow-top-navigation-by-user-activation"
         title="Preview Window"
       />
     </div>
