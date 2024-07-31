@@ -19,15 +19,15 @@
 }
 .exampleofusage_block {
       margin-top: 40px;
-    margin-right: 20px;
+    margin-right: 40px;
   border-radius: 7px;
-  background-color: #282828;
+  background-color: #ffffff;
   padding: 30px 30px;
   width: 300px;
   height: 125px;
 }
 .exampleofusage_text {
-  color: rgb(236, 236, 236);
+  color: rgb(101 101 101);;
   margin-bottom: 13px;
 }
 .description_block {
@@ -71,7 +71,7 @@ input[type="text"] {
   margin-bottom: 14px;
 }
 .mit_b_ic {
-  color: #ededed;
+color: #3e3e3e;
   width: 1rem;
 }
 .mit_tt_tx {
@@ -82,7 +82,7 @@ input[type="text"] {
 .ttl {
   display: flex;
   align-items: center;
-  color: rgb(229, 229, 229);
+color: #3e3e3e;
 }
 .mit_l_bl {
   margin-left: 23px;
@@ -91,8 +91,8 @@ input[type="text"] {
 }
 .mit_tx_ara {
   margin-bottom: 10px;
-  color: #ccc;
-    background: #282828;
+color: #414141;
+    background: #f7f7f7;
   margin-top: 8px;
   white-space: pre-wrap;
   padding: 1.5rem;
@@ -124,7 +124,7 @@ input[type="text"] {
 .cl_bl_gg {
   margin-top: 20px;
   border-radius: 7px;
-  background: #363636;
+background: #f5f5f5;
 width: 96%;
   display: flex;
   justify-content: space-between;
