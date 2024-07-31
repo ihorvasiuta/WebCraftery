@@ -7,10 +7,10 @@ import DownloadWithGitBlock from "../ui/download_withgit/downloadwgit_block";
 import DetailsBlock from "../ui/element_details_block/detailsblock";
 import RenderPreview from "../ui/preview/preview";
 import QuickGuideBlock from "../ui/quickguide_block/quickguide";
-import "./elementspage.css";
 import RenderPreviewPhone from "../ui/preview/preview_phone";
-import elementsData from "../ui/elements_list/elementslist.json";
 import snippetCodeData from "../ui/code_snippet/elementscode.json";
+import elementsData from "../ui/elements_list/elementslist.json";
+import "./elementspage.css";
 import { ElementItem } from "../ui/elements_list/types";
 
 const ElementsPage: React.FC = () => {
@@ -18,46 +18,55 @@ const ElementsPage: React.FC = () => {
   const { elementId } = useParams<{ elementId?: string }>();
   const [element, setElement] = useState<ElementItem | null>(null);
   const [codeData, setCodeData] = useState<any>(null);
-  function isAbsoluteUrl(url: string) {
-    return (
-      url.indexOf("http://") === 0 ||
-      url.indexOf("https://") === 0 ||
-      url.indexOf("//") === 0
-    );
-  }
+  const [updatedData, setUpdatedData] = useState<ElementItem | null>(null);
 
-  // Function to update image URLs in JSON data
-  function processImageUrls(jsonData: any) {
-    return jsonData.map((item: any) => {
-      // Check if the image URL is absolute or relative
-      if (isAbsoluteUrl(item.imageUrl)) {
-        return item; // Use the absolute URL as is
-      } else {
-        return {
-          ...item,
-          imageUrl: `${process.env.PUBLIC_URL}${item.imageUrl}`, // Append the environment-specific base URL
-        };
-      }
-    });
-  }
-
-  const updatedData = processImageUrls(elementsData);
   useEffect(() => {
     if (elementId) {
-      const selectedElement = elementsData
-        .flatMap((cat) => cat.childrens)
-        .find((child) => child.id === elementId);
-      setElement(selectedElement || null);
+      const selectedElement =
+        elementsData
+          .flatMap((cat) => cat.childrens)
+          .find((child) => child.id === elementId) || null;
+      setElement(selectedElement);
 
       const selectedCode = snippetCodeData.find(
         (item) => item.id === elementId
       );
       setCodeData(selectedCode?.code || null);
+
+      if (selectedElement) {
+        const publicUrl = process.env.PUBLIC_URL || "";
+        const modifiedElement = addPrefixToImgSrc(selectedElement, publicUrl);
+        setUpdatedData(modifiedElement);
+      }
     } else {
       setElement(null);
       setCodeData(null);
+      setUpdatedData(null);
     }
   }, [elementId]);
+
+  const addPrefixToImgSrc = (
+    element: ElementItem,
+    prefix: string
+  ): ElementItem => {
+  const updatedElement = { ...element };
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(updatedElement.code.html, "text/html");
+  const imgTags = doc.querySelectorAll("img");
+
+  imgTags.forEach((img) => {
+    const src = img.getAttribute("src");
+    if (src && !/^https?:\/\//i.test(src)) {
+      const newSrc = src.includes("?v=")
+        ? src
+        : `${prefix}${src}?v=${Date.now()}`;
+      img.setAttribute("src", newSrc);
+    }
+  });
+  updatedElement.code.html = new XMLSerializer().serializeToString(doc);
+  return updatedElement;  
+  };
+
   const handleSelectItem = (item: ElementItem) => {
     navigate(item.path);
   };
@@ -75,8 +84,12 @@ const ElementsPage: React.FC = () => {
                 <div className="content_block">
                   <div className="pr_windows_wrapper">
                     <div className="preview_windows">
-                      <RenderPreview codes={updatedData.code} />
-                      <RenderPreviewPhone codes={updatedData.code} />
+                      {updatedData && (
+                        <>
+                          <RenderPreview codes={updatedData.code} />
+                          <RenderPreviewPhone codes={updatedData.code} />
+                        </>
+                      )}
                     </div>
                   </div>
                   <div className="sources_block">
