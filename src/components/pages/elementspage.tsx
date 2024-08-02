@@ -18,7 +18,7 @@ const ElementsPage: React.FC = () => {
   const { elementId } = useParams<{ elementId?: string }>();
   const [element, setElement] = useState<ElementItem | null>(null);
   const [codeData, setCodeData] = useState<any>(null);
-  const [updatedData, setUpdatedData] = useState<ElementItem | null>(null);
+  const [updatedElement, setUpdatedElement] = useState<ElementItem | null>(null);
 
   useEffect(() => {
     if (elementId) {
@@ -36,12 +36,13 @@ const ElementsPage: React.FC = () => {
       if (selectedElement) {
         const publicUrl = process.env.PUBLIC_URL || "";
         const modifiedElement = addPrefixToImgSrc(selectedElement, publicUrl);
-        setUpdatedData(modifiedElement);
+        const modifiedDownPath = addPrefixToDownSrc(modifiedElement, publicUrl);
+        setUpdatedElement(modifiedDownPath);
       }
     } else {
       setElement(null);
       setCodeData(null);
-      setUpdatedData(null);
+      setUpdatedElement(null)
     }
   }, [elementId]);
 
@@ -49,22 +50,35 @@ const ElementsPage: React.FC = () => {
     element: ElementItem,
     prefix: string
   ): ElementItem => {
-  const updatedElement = { ...element };
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(updatedElement.code.html, "text/html");
-  const imgTags = doc.querySelectorAll("img");
+    const updatedElement = { ...element };
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(updatedElement.code.html, "text/html");
+    const imgTags = doc.querySelectorAll("img");
 
-  imgTags.forEach((img) => {
-    const src = img.getAttribute("src");
-    if (src && !/^https?:\/\//i.test(src)) {
-      const newSrc = src.includes("?v=")
-        ? src
-        : `${prefix}${src}?v=${Date.now()}`;
-      img.setAttribute("src", newSrc);
-    }
-  });
-  updatedElement.code.html = new XMLSerializer().serializeToString(doc);
-  return updatedElement;  
+    imgTags.forEach((img) => {
+      const src = img.getAttribute("src");
+      if (src && !/^https?:\/\//i.test(src)) {
+        const newSrc = src.includes("?v=")
+          ? src
+          : `${prefix}${src}?v=${Date.now()}`;
+        img.setAttribute("src", newSrc);
+      }
+    });
+    updatedElement.code.html = new XMLSerializer().serializeToString(doc);
+    return updatedElement;
+  };
+  const addPrefixToDownSrc = (
+    element: ElementItem,
+    prefix: string
+  ): ElementItem => {
+        const updatedElement = { ...element };
+      if (updatedElement.download_path) {
+        updatedElement.download_path = `${prefix}${updatedElement.download_path}`;
+      }
+      if (updatedElement.images_path) {
+        updatedElement.images_path = `${prefix}${updatedElement.images_path}`;
+      }
+    return updatedElement;
   };
 
   const handleSelectItem = (item: ElementItem) => {
@@ -84,10 +98,10 @@ const ElementsPage: React.FC = () => {
                 <div className="content_block">
                   <div className="pr_windows_wrapper">
                     <div className="preview_windows">
-                      {updatedData && (
+                      {updatedElement && (
                         <>
-                          <RenderPreview codes={updatedData.code} />
-                          <RenderPreviewPhone codes={updatedData.code} />
+                          <RenderPreview codes={updatedElement.code} />
+                          <RenderPreviewPhone codes={updatedElement.code} />
                         </>
                       )}
                     </div>
@@ -96,8 +110,8 @@ const ElementsPage: React.FC = () => {
                     <CodeSnippet codeExamples={codeData} />
                     <DownloadBlock
                       downloadexamples={{
-                        projectpath: element.download_path || "",
-                        imagespath: element.images_path || "",
+                        projectpath: updatedElement?.download_path || "",
+                        imagespath: updatedElement?.images_path || "",
                         images: element.images || false,
                       }}
                     />
