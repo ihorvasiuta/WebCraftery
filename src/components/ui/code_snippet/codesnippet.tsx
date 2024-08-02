@@ -61,7 +61,11 @@ const CodeSnippet: React.FC<CodeSnippetProps> = ({ codeExamples }) => {
     }
     return code;
   };
-
+  const fileNames: Record<keyof CodeExamples, string> = {
+    html: "index.html",
+    css: "styles.css",
+    js: "script.js",
+  };
   return (
     <div
       className={styles.code_snippet}
@@ -79,7 +83,7 @@ const CodeSnippet: React.FC<CodeSnippetProps> = ({ codeExamples }) => {
               }`}
               onClick={() => setActiveTab(lang as keyof CodeExamples)}
             >
-              {lang}.file
+              {fileNames[lang]}
               <img
                 src={require(`./file_icons/${lang}_icon.svg`)}
                 alt={`${lang} icon`}
