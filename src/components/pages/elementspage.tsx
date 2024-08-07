@@ -9,6 +9,7 @@ import RenderPreview from "../ui/preview/preview";
 import QuickGuideBlock from "../ui/quickguide_block/quickguide";
 import RenderPreviewPhone from "../ui/preview/preview_phone";
 import snippetCodeData from "../ui/code_snippet/elementscode.json";
+import ProcentageComp from "../ui/procentage/procentage";
 import elementsData from "../ui/elements_list/elementslist.json";
 import "./elementspage.css";
 import { ElementItem } from "../ui/elements_list/types";
@@ -18,7 +19,9 @@ const ElementsPage: React.FC = () => {
   const { elementId } = useParams<{ elementId?: string }>();
   const [element, setElement] = useState<ElementItem | null>(null);
   const [codeData, setCodeData] = useState<any>(null);
-  const [updatedElement, setUpdatedElement] = useState<ElementItem | null>(null);
+  const [updatedElement, setUpdatedElement] = useState<ElementItem | null>(
+    null
+  );
 
   useEffect(() => {
     if (elementId) {
@@ -39,10 +42,11 @@ const ElementsPage: React.FC = () => {
         const modifiedDownPath = addPrefixToDownSrc(modifiedElement, publicUrl);
         setUpdatedElement(modifiedDownPath);
       }
+      window.scrollTo(0, 0);
     } else {
       setElement(null);
       setCodeData(null);
-      setUpdatedElement(null)
+      setUpdatedElement(null);
     }
   }, [elementId]);
 
@@ -71,13 +75,13 @@ const ElementsPage: React.FC = () => {
     element: ElementItem,
     prefix: string
   ): ElementItem => {
-        const updatedElement = { ...element };
-      if (updatedElement.download_path) {
-        updatedElement.download_path = `${prefix}${updatedElement.download_path}`;
-      }
-      if (updatedElement.images_path) {
-        updatedElement.images_path = `${prefix}${updatedElement.images_path}`;
-      }
+    const updatedElement = { ...element };
+    if (updatedElement.download_path) {
+      updatedElement.download_path = `${prefix}${updatedElement.download_path}`;
+    }
+    if (updatedElement.images_path) {
+      updatedElement.images_path = `${prefix}${updatedElement.images_path}`;
+    }
     return updatedElement;
   };
 
@@ -97,11 +101,32 @@ const ElementsPage: React.FC = () => {
               <div className="container">
                 <div className="content_block">
                   <div className="pr_windows_wrapper">
+                    <div className="ttl_desc">
+                      <div className="ttl_of_el">{element.title}</div>
+                      <div className="shrt_desc_of_el">
+                        {element.description}
+                      </div>
+                    </div>
                     <div className="preview_windows">
                       {updatedElement && (
                         <>
                           <RenderPreview codes={updatedElement.code} />
-                          <RenderPreviewPhone codes={updatedElement.code} />
+                          <div className="sml_device_phone_text">
+                            <RenderPreviewPhone codes={updatedElement.code} />
+                            <div className="ttl_desc_smalldevices">
+                              <div className="ttl_of_el">{element.title}</div>
+                              <div className="shrt_desc_of_el">
+                                {element.description}
+                              </div>
+                              <ProcentageComp
+                                code={{
+                                  html: element.code.html,
+                                  css: element.code.css,
+                                  js: element.code.js,
+                                }}
+                              />
+                            </div>
+                          </div>
                         </>
                       )}
                     </div>
@@ -138,7 +163,12 @@ const ElementsPage: React.FC = () => {
               </div>
             </>
           ) : (
-            <p>Select an element from the list to see details.</p>
+            <div className="select">
+              <div className="elements_info">
+                <h1 className="elementsinfo_title">Web Components</h1>
+              </div>
+              <QuickGuideBlock />
+            </div>
           )}
         </div>
       </div>

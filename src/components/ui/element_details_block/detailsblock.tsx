@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ProcentageComp from "../procentage/procentage";
 import "./detailsblock.css";
 
 type DetailsData = {
@@ -17,7 +18,6 @@ type DetailsProps = {
 };
 const DetailsBlock: React.FC<DetailsProps> = ({ details_data }) => {
   const [licenseText, setLicenseText] = useState<string>("");
-  const [procentage, setProzentage] = useState({ html: "", css: "", js: "" });
 
   useEffect(() => {
     const text = `Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,18 +39,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 `;
     setLicenseText(text);
-    const htmllen = details_data.code.html.length;
-    const csslen = details_data.code.css.length;
-    const jslen = details_data.code.js.length;
-    const totallen = htmllen + csslen + jslen;
-    if (totallen > 0) {
-      setProzentage({
-        html: `${Math.round((htmllen / totallen) * 100)}%`,
-        css: `${Math.round((csslen / totallen) * 100)}%`,
-        js: `${Math.round((jslen / totallen) * 100)}%`,
-      });
-    }
-  }, [details_data]);
+  }, []);
   return (
     <div className="details_block">
       <div className="important_part">
@@ -74,63 +63,15 @@ SOFTWARE.
           />
         )}
       </div>
-      <div className="desc_content">
-        <div className="ttl_desc">
-          <h1 className="details_title">{details_data.title}</h1>
-          <p className="description_block">{details_data.description}</p>
-        </div>
-        <div className="vidn_cont">
-          <div className="skill-box">
-            <span className="tt">HTML</span>
-
-            <div className="skill-bar">
-              <span
-                className="skill-per html"
-                style={{ width: procentage.html }}
-              >
-                <span className="tooltip">{procentage.html}</span>
-              </span>
-            </div>
-          </div>
-
-          <div className="skill-box">
-            <span className="tt">CSS</span>
-
-            <div className="skill-bar">
-              <span
-                className="skill-per scss"
-                style={{ width: procentage.css }}
-              >
-                <span className="tooltip">{procentage.css}</span>
-              </span>
-            </div>
-          </div>
-          <div className="skill-box">
-            <span className="tt">JS</span>
-            <div className="skill-bar">
-              <span
-                className="skill-per Boostrap"
-                style={{ width: procentage.js }}
-              >
-                <span className="tooltip">{procentage.js}</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="sp_line"></div>
       <div className="cl_bl_gg">
-        <div className="exampleofusage_block">
-          <p className="exampleofusage_text">Example of usage this element:</p>
-          <a
-            className="demo_url"
-            href={details_data.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://example.com/classic-menu
-          </a>
-        </div>
+        <ProcentageComp
+          code={{
+            html: details_data.code.html,
+            css: details_data.code.css,
+            js: details_data.code.js,
+          }}
+        />
         <div className="mit_l_bl">
           <div className="ttl">
             <svg
