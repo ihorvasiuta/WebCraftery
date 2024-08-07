@@ -24,6 +24,7 @@
   margin-bottom: 10px;
 }
 .feedback {
+  margin-top: 30px;
   font-family: Montserrat, ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji" !important;
   color: #ffffff;
@@ -56,18 +57,6 @@
 .dislike-button:hover {
   background-color: #86868633;
 }
-@media screen and (max-width: 1300px) {
-  .download_block {
-    height: 250px;
-    width: 800px;
-    border-radius: 0px;
-    border-bottom-right-radius: 23px;
-    border-bottom-left-radius: 23px;
-  }
-  .feedback {
-    margin-top: 30px;
-  }
-}
 .download_options {
   display: flex;
   justify-content: center;
@@ -89,7 +78,7 @@
   color: #ffffff;
   background: #282828;
   border-radius: 7px;
-  height: 210px;
+  max-height: 210px;
   padding: 20px;
 }
 .dwnld_btn {
@@ -144,9 +133,28 @@
   border: 1px solid #146c54;
 }
 .gbrtc_blbl {
-  height: 350px;
+  max-height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 15px 25px;
+}
+@media screen and (max-width: 1300px) {
+  .download_block {
+    min-height: 250px;
+    width: 100%;
+    border-radius: 0px;
+    border-bottom-right-radius: 23px;
+    border-bottom-left-radius: 23px;
+  }
+  .download_options {
+    justify-content: start;
+    flex-direction: row;
+  }
+  .dwnld_btn:first-child {
+    margin-right: 20px;
+  }
+  .feedback {
+    margin-top: 15px;
+  }
 }
