@@ -43,7 +43,7 @@ const ElementsList: React.FC<{ onSelect: (item: ElementItem) => void }> = ({
           <div key={index} className="element_group">
             <div
               className="element_title"
-              onClick={() => toggleSubitems(index)}
+              // onClick={() => toggleSubitems(index)}
             >
               <span>{category.title}</span>
               <span className={`arrow ${category.open ? "open" : ""}`}>

@@ -5,7 +5,7 @@
     "childrens": [
       {
         "title": "Classic Menu",
-        "description": "The Classic Navigation Menu is a responsive bottom navigation bar designed to enhance user interfaces on various devices. It features smooth scroll effects, sticky headers, and a mobile-friendly hamburger menu. Developed with HTML, CSS, and JavaScript, this menu highlights active links for intuitive navigation and is customizable through CSS variables. With detailed integration instructions and open-source collaboration on GitHub, it's an ideal solution for developers seeking a professional, adaptable navigation solution.",
+        "description": "The Classic Navigation Menu is a responsive bottom navigation bar designed to enhance user interfaces on various devices. It features smooth scroll effects, sticky headers, and a mobile-friendly hamburger menu. Developed with HTML, CSS, and JavaScript, this menu highlights active links for intuitive navigation and is customizable through CSS variables.",
         "demo_url": "https://example.com/classic-menu",
         "path": "/classic-navbar",
         "id": "classic-navbar",

@@ -50,19 +50,20 @@
 .subitems {
   overflow: hidden;
   list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-  max-height: 0;
-  transition: max-height 0.2s ease-out, opacity 0.3s ease-out;
-  opacity: 0;
-}
-
-.subitems.open {
   display: flex;
   flex-direction: column;
   max-height: 1000px;
   opacity: 1;
+  /* transition: max-height 0.2s ease-out, opacity 0.3s ease-out;
+  opacity: 0; */
 }
+
+/* .subitems.open {
+  display: flex;
+  flex-direction: column;
+  max-height: 1000px;
+  opacity: 1;
+} */
 
 .arrow {
   padding-left: 35px;

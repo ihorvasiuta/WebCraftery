@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="footer__social">
             <h3 className="footer__title">Follow Us</h3>
-            <div className="social_icons_block">
+            <div className="social_icons_block_footer">
               <a
                 href="https://Discord.com"
                 className="nav_social_icon"
