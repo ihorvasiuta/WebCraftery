@@ -130,6 +130,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90px;
+}
+.social_icons_block_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 130px;
 }
 .nav_social_icon {

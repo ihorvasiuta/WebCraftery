@@ -6,7 +6,13 @@
   overflow: hidden;
   position: relative;
   background-color: rgb(255, 255, 255);
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
+  /* box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486); */
+}
+@media screen and (max-width: 1300px) {
+  .preview_window_big {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .big_iframe {
   overflow: auto;
