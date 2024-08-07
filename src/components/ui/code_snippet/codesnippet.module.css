@@ -72,6 +72,7 @@
 }
 @media screen and (max-width: 1300px) {
   .code_snippet {
+    width: 100%;
     border-radius: 0px;
     border-top-left-radius: 23px;
     border-top-right-radius: 23px;
