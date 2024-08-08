@@ -70,7 +70,7 @@
   width: 570px;
   display: flex;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1417px) {
   .code_snippet {
     width: 100%;
     border-radius: 0px;
@@ -79,8 +79,8 @@
   }
 }
 .copy_button {
-  position: relative;
-  left: 115px;
+  position: absolute;
+  right: 20px;
   width: 90px;
   height: 27px;
   display: flex;

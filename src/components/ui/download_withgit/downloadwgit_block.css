@@ -215,12 +215,22 @@
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1300px) {
+  .rght_side_wbtn {
+    max-width: 320px;
+    margin-right: 0;
+    padding-left: 17px;
+  }
+}
 @media screen and (max-width: 1240px) {
   .content_wgithub_block {
     flex-direction: column;
   }
+  .rght_side_wbtn {
+    padding-left: 0;
+        max-width: 500px;
+  }
 }
-
 .copy_button {
   width: 50px;
   height: 20px;

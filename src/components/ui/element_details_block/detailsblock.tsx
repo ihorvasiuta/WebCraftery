@@ -63,15 +63,16 @@ SOFTWARE.
           />
         )}
       </div>
-      <div className="sp_line"></div>
       <div className="cl_bl_gg">
-        <ProcentageComp
-          code={{
-            html: details_data.code.html,
-            css: details_data.code.css,
-            js: details_data.code.js,
-          }}
-        />
+        <div className="percentage_detailsblock">
+          <ProcentageComp
+            code={{
+              html: details_data.code.html,
+              css: details_data.code.css,
+              js: details_data.code.js,
+            }}
+          />
+        </div>
         <div className="mit_l_bl">
           <div className="ttl">
             <svg

@@ -29,11 +29,12 @@
 }
 .sources_block {
   display: flex;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1417px) {
   .sources_block {
+    margin-top: 15px;
     flex-direction: column;
   }
 }
@@ -82,7 +83,7 @@
   max-width: 480px;
   margin-right: 40px;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1417px) {
   .ttl_desc {
     display: none;
   }
@@ -91,11 +92,11 @@
   }
   .sml_device_phone_text {
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1417px) {
   .ttl_desc_smalldevices {
     display: none;
   }

@@ -7,12 +7,14 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .docs_title {
-  font-size: 17px;
   color: #dddddd;
   margin-bottom: 20px;
-  font-weight: 500;
   display: block;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
   width: 100%;
   text-align: center;
   margin: 15px 0px;
@@ -139,13 +141,13 @@
   justify-content: space-between;
   margin: 15px 25px;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1417px) {
   .download_block {
-    min-height: 250px;
+    min-height: 200px;
     width: 100%;
     border-radius: 0px;
-    border-bottom-right-radius: 23px;
-    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
   .download_options {
     justify-content: start;
@@ -155,6 +157,14 @@
     margin-right: 20px;
   }
   .feedback {
-    margin-top: 15px;
+    margin-top: 0;
+    max-width: 250px;
+  }
+  .copyordown_block {
+    margin-right: 13px;
+    max-width: 625px;
+  }
+  .gbrtc_blbl {
+    flex-direction: row;
   }
 }

@@ -220,11 +220,21 @@ input[type="text"] {
   background-color: rgb(226, 226, 226);
   transform: translateX(-50%) rotate(45deg);
 }
-@media screen and (max-width: 1300px) {
+
+.percentage_detailsblock {
+  width: 350px;
+}
+@media screen and (max-width: 1417px) {
+  .percentage_detailsblock {
+    display: none;
+  }
   .cl_bl_gg {
-    width: 97%;
+    width: 100%;
+  }
+  .mit_l_bl {
+    margin-left: 6px;
   }
   .mit_tx_ara {
-    max-width: 350px;
+    width: 730px;
   }
 }
