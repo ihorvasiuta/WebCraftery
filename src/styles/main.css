@@ -296,3 +296,13 @@ main {
 .l_mit_txt:hover {
   color: rgb(255, 255, 255);
 }
+/* 
+@media screen and (max-width: 1417px) {
+  .content_block {
+    max-width: 1000px;
+  }
+} */
+
+.codesnippet_syntax_highlighter__TQqKK {
+  max-width: 900px;
+}
