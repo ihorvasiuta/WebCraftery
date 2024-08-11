@@ -306,3 +306,17 @@ main {
 .codesnippet_syntax_highlighter__TQqKK {
   max-width: 900px;
 }
+
+.description_link {
+    text-decoration: underline;
+}
+
+.html_link {
+  color: #de691d;
+}
+.css_link {
+  color: #0057ec;
+}
+.js_link {
+  color: #ba8204;
+}

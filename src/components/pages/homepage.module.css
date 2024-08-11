@@ -1,0 +1,142 @@
+/* .img_demo {
+    background-image: url("../../assets/images/demoimg_homepage.jpg");
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.img_demo {
+  height: 544px;
+  background-image: url("https://ieeephotonics.org/wp-content/uploads/2023/09/photonics-website-multi-screens-1024x605.jpg");
+  width: 920px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 425px;
+  overflow: hidden;
+  background: #dadadc;
+}
+.container {
+  max-width: 1040px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main_title {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 27px;
+  color: black;
+  line-height: 130%;
+}
+.highlight_webcraftery {
+  text-decoration: underline;
+}
+.un_ttl_txt {
+  line-height: 20px;
+  margin-top: 15px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  max-width: 400px;
+}
+/* From Uiverse.io by McHaXYT */
+.getstarted_btn {
+  margin-top: 50px;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #151515;
+  color: #eee;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.getstarted_btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn_span {
+  color: #aaa;
+}
+
+.content_fr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.codesnippet {
+  position: relative;
+  bottom: 38px;
+}
+.devices_text {
+  color: rgb(64 64 64);
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  max-width: 550px;
+  background: #dadadc;
+  border-radius: 15px 15px 0 0;
+}
+.device_text_wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.steps_section {
+  font-family: "Poppins", sans-serif;
+  margin: 40px 0;
+}
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.step {
+  margin: 20px 0;
+}
+
+.stepTitle {
+  font-weight: 530;
+  margin-bottom: 10px;
+  color: #784a8a;
+}
+
+.stepDescription {
+  color: #3b3b3b;
+  font-size: 16px;
+}
+
+.un_btn_txt {
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
