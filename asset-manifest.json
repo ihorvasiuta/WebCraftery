@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/WebCraftery/static/css/main.818c0c4a.css",
-    "main.js": "/WebCraftery/static/js/main.a240b0a5.js",
-    "static/media/css_icon.svg": "/WebCraftery/static/media/css_icon.396a7870977eb0e16e11.svg",
-    "static/media/translate.png": "/WebCraftery/static/media/translate.66a21250b044a06a7668.png",
-    "static/media/refresh_icon.png": "/WebCraftery/static/media/refresh_icon.5b8d9bd333675db6afc8.png",
-    "static/media/js_icon.svg": "/WebCraftery/static/media/js_icon.949d89cd581547d5191c.svg",
-    "static/media/elements_icon.svg": "/WebCraftery/static/media/elements_icon.82d59a7351959f21a5ae371c59cd18fc.svg",
-    "index.html": "/WebCraftery/index.html",
-    "static/media/html_icon.svg": "/WebCraftery/static/media/html_icon.d206dd5277174ed6dfab.svg",
-    "main.818c0c4a.css.map": "/WebCraftery/static/css/main.818c0c4a.css.map",
-    "main.a240b0a5.js.map": "/WebCraftery/static/js/main.a240b0a5.js.map"
+    "main.css": "/static/css/main.818c0c4a.css",
+    "main.js": "/static/js/main.6f2d044a.js",
+    "static/media/css_icon.svg": "/static/media/css_icon.396a7870977eb0e16e11.svg",
+    "static/media/translate.png": "/static/media/translate.66a21250b044a06a7668.png",
+    "static/media/refresh_icon.png": "/static/media/refresh_icon.5b8d9bd333675db6afc8.png",
+    "static/media/js_icon.svg": "/static/media/js_icon.949d89cd581547d5191c.svg",
+    "static/media/elements_icon.svg": "/static/media/elements_icon.82d59a7351959f21a5ae371c59cd18fc.svg",
+    "static/media/html_icon.svg": "/static/media/html_icon.d206dd5277174ed6dfab.svg",
+    "index.html": "/index.html",
+    "main.818c0c4a.css.map": "/static/css/main.818c0c4a.css.map",
+    "main.6f2d044a.js.map": "/static/js/main.6f2d044a.js.map"
   },
   "entrypoints": [
     "static/css/main.818c0c4a.css",
-    "static/js/main.a240b0a5.js"
+    "static/js/main.6f2d044a.js"
   ]
 }
