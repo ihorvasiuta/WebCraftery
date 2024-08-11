@@ -87,6 +87,7 @@ const Header: React.FC = () => {
             href="https://Discord.com"
             className="nav_social_icon"
             target="_blank"
+            rel="noreferrer"
           >
             <svg
               width="26"
@@ -105,6 +106,7 @@ const Header: React.FC = () => {
             href="https://twitter.com"
             className="nav_social_icon"
             target="_blank"
+            rel="noreferrer"
           >
             <svg
               width="20"
@@ -124,6 +126,7 @@ const Header: React.FC = () => {
             href="https://instagram.com"
             className="nav_social_icon"
             target="_blank"
+            rel="noreferrer"
           >
             <svg
               width="21"

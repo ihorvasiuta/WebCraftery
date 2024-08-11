@@ -52,7 +52,10 @@ const Footer: React.FC = () => {
               <p className="mit_txt_un">
                 All content (Web Components) on this site are published under
                 the{" "}
-                <a className="l_mit_txt" href="https://opensource.org/license/mit">
+                <a
+                  className="l_mit_txt"
+                  href="https://opensource.org/license/mit"
+                >
                   MIT License
                 </a>
               </p>
@@ -65,6 +68,7 @@ const Footer: React.FC = () => {
                 href="https://Discord.com"
                 className="nav_social_icon"
                 target="_blank"
+                rel="noreferrer"
               >
                 <svg
                   width="26"
@@ -83,6 +87,7 @@ const Footer: React.FC = () => {
                 href="https://Discord.com"
                 className="nav_social_icon"
                 target="_blank"
+                rel="noreferrer"
               >
                 <svg
                   width="20"
@@ -101,6 +106,7 @@ const Footer: React.FC = () => {
                 href="https://telegram.org"
                 className="nav_social_icon"
                 target="_blank"
+                rel="noreferrer"
               >
                 <svg
                   width="20"
@@ -120,6 +126,7 @@ const Footer: React.FC = () => {
                 href="https://Discord.com"
                 className="nav_social_icon"
                 target="_blank"
+                rel="noreferrer"
               >
                 <svg
                   width="21"
