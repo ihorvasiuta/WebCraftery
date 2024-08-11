@@ -6,14 +6,14 @@ const HomePage: React.FC = () => {
     <div className="homepage">
       <div className={styles.container}>
         <section className="fr_section_home">
-          <h3 className={styles.main_title}>
+          <h1 className={styles.main_title}>
             Find website inspiration and create your <br />
             website with{" "}
             <span className={styles.highlight_webcraftery}>WebCraftery</span>
-          </h3>
+          </h1>
           <div className={styles.content_fr}>
             <div className={styles.content_text}>
-              <p className={styles.un_ttl_txt}>
+              <h2 className={styles.un_ttl_txt}>
                 Unlock the potential of your website with WebCraftery—completely
                 free! Our platform offers a curated collection of high-quality,
                 clean, and efficient{" "}
@@ -38,12 +38,12 @@ const HomePage: React.FC = () => {
                   JavaScript
                 </a>{" "}
                 components.
-              </p>
-              <p className={styles.un_ttl_txt}>
+              </h2>
+              <h2 className={styles.un_ttl_txt}>
                 Clean code means faster, more reliable websites, so you can
                 start building optimized sites that deliver a seamless user
                 experience.
-              </p>
+              </h2>
               <a href={`/elements`}>
                 <button className={styles.getstarted_btn}>
                   Get started
