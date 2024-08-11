@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import styles from "./codesnippet.module.css";
@@ -21,10 +21,13 @@ const CodeSnippet: React.FC<CodeSnippetProps> = ({ codeExamples }) => {
       codeExamples[key as keyof CodeExamples]!.trim() !== ""
   ) as Array<keyof CodeExamples>;
 
-  const [activeTab, setActiveTab] = useState<keyof CodeExamples>(
-    availableLanguages[0]
-  );
+  const [activeTab, setActiveTab] = useState<keyof CodeExamples>("html");
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    // Reset to 'html' tab whenever codeExamples changes
+    setActiveTab("html");
+  }, [codeExamples]);
 
   const copyToClipboard = (code: string) => {
     navigator.clipboard.writeText(code).then(() => {
@@ -61,11 +64,13 @@ const CodeSnippet: React.FC<CodeSnippetProps> = ({ codeExamples }) => {
     }
     return code;
   };
+
   const fileNames: Record<keyof CodeExamples, string> = {
     html: "index.html",
     css: "styles.css",
     js: "script.js",
   };
+
   return (
     <div
       className={styles.code_snippet}
