@@ -6,7 +6,7 @@
   margin-top: 30px;
   font-family: "Google Sans", sans-serif;
   background: #ffffff;
-  min-height: 450px;
+  min-height: 320px;
   max-width: 1080px;
   padding: 19px;
   color: black;
@@ -45,7 +45,7 @@
   border-radius: 22px;
   background: #eaeaea;
   width: 100%;
-  height: 170px;
+  min-height: 170px;
 }
 .important_icon {
   width: 23px;
@@ -237,4 +237,23 @@ input[type="text"] {
   .mit_tx_ara {
     width: 730px;
   }
+}
+.warning_message {
+  position: fixed;
+  z-index: 10000000000000;
+  right: 180px;
+  bottom: 0;
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Add transition for smooth fade */
+  opacity: 1;
+  visibility: visible;
+}
+
+.warning_icon {
+  height: 40px;
+  width: 35px;
+}
+
+.warning_hidden {
+  opacity: 0;
+  visibility: hidden;
 }
