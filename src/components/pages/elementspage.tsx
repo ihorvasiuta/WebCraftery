@@ -86,14 +86,17 @@ const ElementsPage: React.FC = () => {
   };
 
   const handleSelectItem = (item: ElementItem) => {
-    navigate(item.path);
+    navigate(`/elements/${item.id}`);
   };
 
   return (
     <div className="elementspage">
       <div className="exp_group">
         <div className="elements_list">
-          <ElementsList onSelect={handleSelectItem} />
+          <ElementsList
+            onSelect={handleSelectItem}
+            activeId={elementId || null}
+          />
         </div>
         <div className="content_side">
           {element ? (
@@ -198,7 +201,12 @@ const ElementsPage: React.FC = () => {
                     </li>
                     <li>
                       <strong>
-                        <a className="link_to_builder" target="_blank" rel="noreferrer" href="/builder">
+                        <a
+                          className="link_to_builder"
+                          target="_blank"
+                          rel="noreferrer"
+                          href="/builder"
+                        >
                           Use Webcraftery Builder:
                         </a>
                       </strong>{" "}
