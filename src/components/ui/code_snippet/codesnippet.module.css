@@ -37,6 +37,7 @@
   background: rgb(30, 30, 30);
 }
 .syntax_highlighter {
+  max-width: 900px;
   max-height: 380px;
   overflow: auto;
   padding: 10px;
