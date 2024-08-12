@@ -103,6 +103,7 @@
   border-radius: 15px 15px 0 0;
 }
 .device_text_wrapper {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -139,4 +140,65 @@
   margin-left: 5px;
   font-size: 14px;
   font-weight: 500;
+}
+
+/* Responsive Section Styles */
+.responsive_section {
+padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f7; /* Light grey background for contrast */
+  border-top: 1px solid #e1e1e3; /* Subtle top border for definition */
+}
+
+.responsive_title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #333; /* Dark grey for better readability */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.responsive_grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.responsive_item {
+  padding: 25px;
+  flex: 0 0 30%; /* Sets the basis for each item to 30% of the flex container */
+  max-width: 30%; /* Ensures that the flex basis is not exceeded */
+  box-sizing: border-box; /* Includes padding and border in the element's width */
+  background-color: #fff; /* White background for each item */
+  margin-bottom: 20px; /* Space between items vertically */
+  border: 1px solid #ddd; /* Light border for each item */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.responsive_item:hover {
+  transform: translateY(-5px); /* Slightly raise the item on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.responsive_item h3 {
+  color: #1a1a1a; /* Slightly lighter black for headlines */
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.responsive_item p {
+  font-size: 14px;
+  color: #666; /* Medium grey for paragraph text */
+  line-height: 1.6;
+}
+
+/* Responsive handling */
+@media (max-width: 768px) {
+  .responsive_item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
