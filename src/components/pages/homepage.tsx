@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
                 start building optimized sites that deliver a seamless user
                 experience.
               </h2>
-              <a href={`/elements`}>
+              <a href="/elements">
                 <button className={styles.getstarted_btn}>
                   Get started
                   <span className={styles.btn_span}> ─ it's free</span>
