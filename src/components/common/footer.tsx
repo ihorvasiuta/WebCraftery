@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a className="footer__link" href="/usage">
+                <a className="footer__link" href="/">
                   How It Works
                 </a>
               </li>
@@ -30,17 +30,26 @@ const Footer: React.FC = () => {
             <h3 className="footer__title">Community</h3>
             <ul className="footer__links">
               <li>
-                <a href="#" className="footer__link">
+                <a
+                  href="mailto:random38578394@gmail.com?subject=Support%20Request&body=Please%20describe%20your%20issue%20here."
+                  className="footer__link"
+                >
                   Support
                 </a>
               </li>
               <li>
-                <a href="#" className="footer__link">
+                <a
+                  href="mailto:random38578394@gmail.com?subject=Support%20Request&body=Please%20describe%20your%20issue%20here."
+                  className="footer__link"
+                >
                   Questions
                 </a>
               </li>
               <li>
-                <a href="#" className="footer__link">
+                <a
+                  href="mailto:random38578394@gmail.com?subject=Support%20Request&body=Please%20describe%20your%20issue%20here."
+                  className="footer__link"
+                >
                   Usage help
                 </a>
               </li>
@@ -65,7 +74,7 @@ const Footer: React.FC = () => {
             <h3 className="footer__title">Follow Us</h3>
             <div className="social_icons_block_footer">
               <a
-                href="https://Discord.com"
+                href="https://discord.gg/5fMkyc2u"
                 className="nav_social_icon"
                 target="_blank"
                 rel="noreferrer"
@@ -103,7 +112,7 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
               <a
-                href="https://telegram.org"
+                href="https://x.com/WebCraftery"
                 className="nav_social_icon"
                 target="_blank"
                 rel="noreferrer"

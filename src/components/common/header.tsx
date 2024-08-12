@@ -107,7 +107,7 @@ const Header: React.FC = () => {
         </div>
         <div className="social_icons_block">
           <a
-            href="https://Discord.com"
+            href="https://discord.gg/5fMkyc2u"
             className="nav_social_icon"
             target="_blank"
             rel="noreferrer"
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
             </svg>
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/WebCraftery"
             className="nav_social_icon"
             target="_blank"
             rel="noreferrer"
