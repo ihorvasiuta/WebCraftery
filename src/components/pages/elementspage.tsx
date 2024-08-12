@@ -165,10 +165,58 @@ const ElementsPage: React.FC = () => {
             </>
           ) : (
             <div className="select">
-              <div className="elements_info">
-                <h1 className="elementsinfo_title">Web Components</h1>
+              <div className="container">
+                <div className="elements_info">
+                  <h1 className="elementsinfo_title">
+                    Getting Started with Webcraftery Web Components
+                  </h1>
+                  <p className="elements_description">
+                    Welcome to Webcraftery Elements! Our library includes a wide
+                    array of essential web components such as navigation menus,
+                    footers, and carousel sliders. These components are
+                    adaptable and stylish, designed to integrate smoothly into
+                    any web project.
+                  </p>
+                  <h2 className="steps_title_el">
+                    How to Start Using Web Components:
+                  </h2>
+                  <ol className="steps_list_el">
+                    <li>
+                      <strong>Explore the Components:</strong> Browse our list
+                      of elements to view detailed previews on various devices.
+                      This helps you choose the most suitable components for
+                      your website.
+                    </li>
+                    <li>
+                      <strong>Download or Clone:</strong> Each element can be
+                      downloaded individually as a zipped file or cloned via
+                      GitHub. While both options are available, we recommend
+                      cloning directly from our GitHub repository. This ensures
+                      that you always have the latest updates and features for
+                      each component, keeping your project up-to-date with the
+                      newest advancements in web development.
+                    </li>
+                    <li>
+                      <strong>
+                        <a className="link_to_builder" target="_blank" rel="noreferrer" href="/builder">
+                          Use Webcraftery Builder:
+                        </a>
+                      </strong>{" "}
+                      Utilize the Webcraftery Builder to clone the entire
+                      repository of components. This tool not only provides
+                      access to all updates but also simplifies the integration
+                      process into your existing projects.
+                    </li>
+                    <li>
+                      <strong>Integrate and Customize:</strong> After
+                      downloading, integrate the components into your project
+                      and customize them according to your specific design and
+                      functionality needs.
+                    </li>
+                  </ol>
+                </div>
+                <QuickGuideBlock />
               </div>
-              <QuickGuideBlock />
             </div>
           )}
         </div>
