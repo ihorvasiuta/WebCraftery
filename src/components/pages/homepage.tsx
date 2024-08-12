@@ -50,7 +50,9 @@ const HomePage: React.FC = () => {
                   <span className={styles.btn_span}> ─ it's free</span>
                 </button>
               </a>
-              <p className={styles.un_btn_txt}>Start choosing the elements for your website.</p>
+              <p className={styles.un_btn_txt}>
+                Start choosing the elements for your website.
+              </p>
             </div>
             <svg
               className={styles.codesnippet}
@@ -119,15 +121,55 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </div>
-      <div className={styles.device_text_wrapper}>
-        <p className={styles.devices_text}>
-          See live Examples of the Web Components on different devices <br />
-          demonstrating responsive design.
-        </p>
-      </div>
-      <div className={styles.img_container}>
-        <div className={styles.img_demo}></div>
-      </div>
+
+      <section className={styles.responsive_section}>
+        <div className={styles.container}>
+          <h2 className={styles.responsive_title}>
+            Find Important Elements with Responsive Design
+          </h2>
+          <div className={styles.responsive_grid}>
+            <a
+              href="/elements/classic-navbar"
+              className={styles.responsive_item}
+            >
+              <h3>Navigation Menus</h3>
+              <p>
+                Explore various styles of responsive navigation menus that adapt
+                to any device.
+              </p>
+            </a>
+            <a
+              href="/elements/items-carousel"
+              className={styles.responsive_item}
+            >
+              <h3>Carousel Sliders</h3>
+              <p>
+                Engage your audience with smoothly functioning carousel sliders,
+                optimized for responsiveness.
+              </p>
+            </a>
+            <a
+              href="/elements/classic-footer"
+              className={styles.responsive_item}
+            >
+              <h3>Footers</h3>
+              <p>
+                Discover a range of footer designs that maintain readability and
+                functionality on any screen size.
+              </p>
+            </a>
+          </div>
+        </div>
+        <div className={styles.device_text_wrapper}>
+          <p className={styles.devices_text}>
+            See live Examples of the Web Components on different devices <br />
+            demonstrating responsive design.
+          </p>
+        </div>
+        <div className={styles.img_container}>
+          <div className={styles.img_demo}></div>
+        </div>
+      </section>
       <div className={styles.container}>
         <section className={styles.steps_section}>
           <h2 className={styles.title}>How It Works</h2>
