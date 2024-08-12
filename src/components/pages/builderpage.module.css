@@ -1,0 +1,120 @@
+.container {
+  max-width: 1040px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.builderpage {
+  color: white;
+  padding: 20px 0;
+  min-height: 800px;
+  width: 100%;
+  background: linear-gradient(135deg, #0f0f0f, #2a2a2a, #1e1e1e);
+}
+.builder_section {
+  min-height: 500px;
+}
+.title_part {
+  display: flex;
+  align-items: center;
+}
+.main_title {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 27px;
+  color: #fff;
+  line-height: 130%;
+}
+
+.expl_title {
+  margin-left: 10px;
+  margin-top: 10px;
+  text-decoration: underline;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: #fff;
+}
+.expl_txt_block {
+  margin-left: 15px;
+}
+.expl_txt {
+  margin-bottom: 20px;
+  line-height: 18px;
+  max-width: 300px;
+}
+.build_icon {
+  margin-right: 5px;
+}
+.components_img {
+  border-radius: 10px;
+  max-width: 600px;
+}
+.meet_block {
+  margin-bottom: 20px;
+  box-shadow: 0 26px 58px 0 rgba(0, 0, 0, 0.22),
+    0 5px 14px 0 rgba(0, 0, 0, 0.18);
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 20px;
+  background: #202020;
+}
+.meet_block_txt {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+.sec_section {
+  margin: 50px 0px;
+}
+.sec_section p,
+.sec_section ol,
+.sec_section ul {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.sec_section ol,
+.sec_section ul {
+  margin-top: 30px;
+  padding-left: 1.5rem;
+}
+
+.sec_section li {
+  color: #999;
+  line-height: 20px;
+  margin-bottom: 0.8rem;
+}
+
+.ctaSection {
+  text-align: center;
+  margin-top: 3rem;
+}
+.github_link {
+  text-decoration: underline;
+  color: #f8cfff;
+}
+.strong_txt {
+  color: #ffffff;
+  font-weight: 600;
+}
+.elementslink {
+  color: #bb80c7;
+}
+.elementslink:hover {
+  text-decoration: underline;
+}
+.star_txt {
+  margin-left: 6px;
+}

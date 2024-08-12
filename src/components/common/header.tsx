@@ -70,6 +70,16 @@ const Header: React.FC = () => {
                 Elements
               </NavLink>
             </li>
+            <li className="nav__link builder_link">
+              <NavLink
+                to="/builder"
+                className={({ isActive }) =>
+                  isActive ? "nav__link active" : "nav__link"
+                }
+              >
+                Builder
+              </NavLink>
+            </li>
             <li className="nav__link">
               <NavLink
                 to="/inspirations"
