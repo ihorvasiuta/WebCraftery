@@ -6,6 +6,7 @@ export type Code = {
 
 export type ElementItem = {
   title: string;
+  fullname: string;
   description: string;
   demo_url: string;
   path: string;

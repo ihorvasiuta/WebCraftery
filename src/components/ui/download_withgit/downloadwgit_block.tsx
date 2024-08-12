@@ -2,19 +2,24 @@ import React, { useState } from "react";
 import "./downloadwgit_block.css";
 
 type DownloadWGitExamples = {
+  project_title: string;
   clone_url: string;
   visit_url: string;
 };
 
-const DownloadWithGitBlock: React.FC<DownloadWGitExamples> = ({clone_url, visit_url}) => {
-      const [copied, setCopied] = useState(false);
+const DownloadWithGitBlock: React.FC<DownloadWGitExamples> = ({
+  project_title,
+  clone_url,
+  visit_url,
+}) => {
+  const [copied, setCopied] = useState(false);
 
-      const copyToClipboard = (cmd: string) => {
-        navigator.clipboard.writeText("git " + cmd).then(() => {
-          setCopied(true);
-          setTimeout(() => setCopied(false), 2000);
-        });
-      };
+  const copyToClipboard = (cmd: string) => {
+    navigator.clipboard.writeText("git " + cmd).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
   return (
     <div className="downloadwgit_block">
       <div className="withgit_title">
@@ -35,7 +40,7 @@ const DownloadWithGitBlock: React.FC<DownloadWGitExamples> = ({clone_url, visit_
       <div className="content_wgithub_block">
         <div className="block_wthcomm">
           <p className="wthcomm_text">
-            Clone the Classic Navigation Menu with one Git command:
+            Clone the {project_title} with one Git command:
           </p>
           <div className="wrap">
             <div className="terminal">

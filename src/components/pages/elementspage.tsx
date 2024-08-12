@@ -142,6 +142,7 @@ const ElementsPage: React.FC = () => {
                     />
                   </div>
                   <DownloadWithGitBlock
+                    project_title={element.fullname}
                     clone_url={element.clone_url || ""}
                     visit_url={element.visit_url || ""}
                   />
