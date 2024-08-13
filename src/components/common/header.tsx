@@ -146,7 +146,7 @@ const Header: React.FC = () => {
           </a>
 
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/webcraftery_pub/"
             className="nav_social_icon"
             target="_blank"
             rel="noreferrer"

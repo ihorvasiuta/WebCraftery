@@ -23,7 +23,7 @@ const QuickGuideBlock: React.FC = () => {
           </p>
 
           <img
-          className="extractall_img"
+            className="extractall_img"
             src="https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2024/02/extract-all.jpg"
             alt=""
           />
@@ -42,7 +42,9 @@ const QuickGuideBlock: React.FC = () => {
           If your download does not complete or the file is corrupt, try
           downloading again or contact support.
         </p>
-        <a href="mailto:support@example.com">Contact Support</a>
+        <a href="mailto:random38578394@gmail.com?subject=Support%20Request&body=Please%20describe%20your%20issue%20here.">
+          Contact Support
+        </a>
       </div>
     </div>
   );

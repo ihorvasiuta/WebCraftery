@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
               <a
-                href="https://Discord.com"
+                href="https://t.me/webcraftery"
                 className="nav_social_icon"
                 target="_blank"
                 rel="noreferrer"
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://Discord.com"
+                href="https://www.instagram.com/webcraftery_pub/"
                 className="nav_social_icon"
                 target="_blank"
                 rel="noreferrer"
